@@ -1,0 +1,36 @@
+/* TEAM */
+
+Developer:
+Kenny Richardson
+
+Role:
+AI Engineer
+Full-Stack Developer
+
+Location:
+India
+
+Website:
+https://kennykrichardson.onrender.com
+
+GitHub:
+https://github.com/kennykrichardson
+
+LinkedIn:
+https://linkedin.com/in/kennyrichardson
+
+/* SITE */
+
+Built with:
+
+React
+TypeScript
+Vite
+Framer Motion
+Three.js
+React Three Fiber
+Tailwind CSS
+
+Designed & Developed by Kenny Richardson
+
+© 2026 All Rights Reserved.
