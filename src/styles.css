@@ -408,12 +408,16 @@ a {
   filter: blur(36px);
 }
 
-.home__portrait img {
-    position: absolute;
-    inset: 1rem auto auto 48%;
-    width: min(37rem, 44vw);
-    max-width: none;
-    transform: translateX(-50%);
+.home__portrait img{
+    position:absolute;
+    left:50%;
+    top:1rem;
+
+    width:min(36rem,42vw);
+
+    transform:translateX(-50%);
+
+    height:auto;
 }
 
 .hero-lastname,
@@ -1075,22 +1079,51 @@ a {
 }
 
 @media (max-width: 1050px) {
-  .home {
-    grid-template-columns: 1fr;
-    padding-top: 7rem;
+
+  .home{
+    grid-template-columns:1fr;
+    padding-top:4.5rem;
+    justify-items:center;
+    text-align:left;
   }
 
-  .home__portrait {
-    min-height: 31rem;
-    order: -1;
+  .home__portrait{
+    order:-1;
+
+    width:100%;
+    max-width:28rem;
+
+    min-height:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
   }
 
-  .home__portrait img {
-    width: min(44rem, 116vw);
+  .home__portrait img{
+    position:relative;
+
+    inset:auto;
+
+    width:100%;
+    max-width:28rem;
+
+    height:auto;
+
+    transform:none;
+
+    display:block;
+    margin:auto;
   }
 
-  .project-row {
-    grid-auto-columns: calc(100% - 2px);
+  .project-rows{
+    grid-template-columns:1fr;
+  }
+
+  .project-row{
+    grid-auto-columns:calc(100% - 2px);
   }
 
   .skills__board,
