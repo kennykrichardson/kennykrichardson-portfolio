@@ -83,11 +83,11 @@ function ProjectColumn({ section }: { section: (typeof sections)[number] }) {
                 </div>
                 <div className="project-panel__actions" data-centered={!project.live && project.title === "Fluid Deck AI"}>
                   {project.live && (
-                    <MagneticButton icon="globe" href={project.live}>
+                    <MagneticButton icon="globe" href={project.live} target="_blank" rel="noopener noreferrer">
                       Live Site
                     </MagneticButton>
                   )}
-                  <MagneticButton icon="github" variant="ghost" href={project.repo}>
+                  <MagneticButton icon="github" variant="ghost" href={project.repo} target="_blank" rel="noopener noreferrer">
                     GitHub Repository
                   </MagneticButton>
                 </div>
