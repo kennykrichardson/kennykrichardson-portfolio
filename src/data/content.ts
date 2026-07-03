@@ -13,12 +13,13 @@ import {
   WalletCards,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import flashframeImage from "../assets/projects/flashframe.jpg";
-import fluidDeckImage from "../assets/projects/fluid-deck.jpg";
-import geotrailImage from "../assets/projects/geotrail.jpg";
+import flashframeImage from "../assets/projects/flashframe.jpeg";
+import fluidDeckImage from "../assets/projects/fluid-deck.png";
+import geotrailImage from "../assets/projects/geotrail.png";
 import nishaImage from "../assets/projects/nisha-fitness.jpg";
-import orzynImage from "../assets/projects/orzyn-ai.jpg";
-import quartlyImage from "../assets/projects/quartly.jpg";
+import orzynImage from "../assets/projects/orzyn-ai.png";
+import quartlyImage from "../assets/projects/quartly.jpeg";
+import mnemosyneImage from "../assets/projects/mnemosyne.png";
 
 export type PageId = "home" | "projects" | "skills" | "contact";
 
@@ -106,6 +107,7 @@ export const projects: Project[] = [
     stack: ["Electron", "SQLite", "LanceDB", "Local AI"],
     status: "Desktop app",
     category: "portfolio",
+    image: mnemosyneImage,
     repo: "https://github.com/kennykrichardson/echodrive",
     icon: Database,
     accent: "from-red-500/45 via-zinc-100/10 to-black",

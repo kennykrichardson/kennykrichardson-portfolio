@@ -23,12 +23,22 @@ function ProjectColumn({ section }: { section: (typeof sections)[number] }) {
     setCanScrollRight(node.scrollLeft + node.clientWidth < node.scrollWidth - 4);
   };
 
-  const scrollByCard = (direction: -1 | 1) => {
-    const node = rowRef.current;
-    if (!node) return;
-    node.scrollBy({ left: direction * Math.max(320, node.clientWidth * 0.82), behavior: "smooth" });
-    window.setTimeout(updateScrollState, 380);
-  };
+ const scrollByCard = (direction: -1 | 1) => {
+   const node = rowRef.current;
+   if (!node) return;
+
+   const card = node.querySelector(".project-panel") as HTMLElement;
+   if (!card) return;
+
+   const gap = 19; // matches your 1.2rem CSS gap
+
+   node.scrollBy({
+     left: direction * (card.offsetWidth + gap),
+     behavior: "smooth",
+   });
+
+   window.setTimeout(updateScrollState, 380);
+ };
 
   return (
     <div className="project-section">
@@ -46,7 +56,6 @@ function ProjectColumn({ section }: { section: (typeof sections)[number] }) {
       </div>
       <div className="project-row" aria-label={section.title} ref={rowRef} onScroll={updateScrollState}>
         {list.map((project, index) => {
-          const Icon = project.icon;
           return (
             <motion.article
               className="project-panel reconstruct"
@@ -56,11 +65,8 @@ function ProjectColumn({ section }: { section: (typeof sections)[number] }) {
               transition={{ delay: index * 0.075, duration: 0.72 }}
             >
               <div className="project-panel__image" style={{ backgroundImage: project.image ? `url(${project.image})` : undefined }} />
-              <div className={`project-panel__visual bg-gradient-to-br ${project.accent}`}>
-                <Icon size={58} />
                 <div className="project-panel__grid" />
                 <span>{project.status}</span>
-              </div>
               <div className="project-panel__body">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>

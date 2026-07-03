@@ -277,6 +277,9 @@ a {
 .lede,
 .contact__copy p,
 .project-panel p {
+  font-size:.88rem;
+  line-height:1.55;
+  margin:.6rem 0;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.75;
 }
@@ -490,15 +493,20 @@ a {
   font-size: clamp(1.15rem, 2vw, 1.9rem);
 }
 
-.project-row {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(20rem, 31rem);
-  gap: 1rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0.1rem 0.1rem 1rem;
-  scroll-snap-type: x proximity;
+.project-row{
+
+display:flex;
+
+gap:1rem;
+
+overflow-x:auto;
+
+scroll-snap-type:x mandatory;
+
+padding-bottom:.6rem;
+
+scrollbar-width:none;
+
 }
 
 .project-panel,
@@ -515,6 +523,7 @@ a {
 
 .project-panel {
   min-height: 28rem;
+  flex:0 0 300px;
   scroll-snap-align: start;
 }
 
@@ -561,14 +570,15 @@ a {
 }
 
 .project-panel h3 {
-  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  font-size: 1.6rem;
 }
 
 .chips,
 .skill-card__items {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.52rem;
+  flex-wrap: nowrap;
+  overflow:hidden;
+  gap: 0.4rem;
 }
 
 .chips span,
@@ -1134,7 +1144,7 @@ a {
   }
 
   .project-row{
-    grid-auto-columns:calc(100% - 2px);
+    grid-auto-columns:300px;
   }
 
   .skills__board,
@@ -1356,14 +1366,19 @@ a {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.project-rows {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(1rem, 2.5vw, 1.6rem);
+.project-rows{
+    display:flex;
+    flex-direction:column;
+    gap:1.4rem;
 }
 
-.project-section {
-  min-width: 0;
+.project-section{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:.8rem;
+
+    margin:0;
 }
 
 .project-section__head {
@@ -1419,15 +1434,22 @@ a {
   cursor: not-allowed;
 }
 
-.project-row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% - 1rem) / 2);
-    gap: 1rem;
+.project-row{
 
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
+    display:flex;
+
+    gap:1.2rem;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    scrollbar-width:none;
+
+    scroll-snap-type:x mandatory;
+
+    padding-bottom:.75rem;
+
 }
 
 .project-row::-webkit-scrollbar {
@@ -1435,28 +1457,49 @@ a {
 }
 
 .project-panel {
-  min-height: 34rem;
+  flex:0 0 calc((100% - 3.6rem)/4);
+
+  height:340px;
+  min-height:340px;
+
+  max-width:calc((100% - 3.6rem)/4);
   isolation: isolate;
   background: rgba(8, 8, 8, 0.48);
 }
 
-.project-panel__image {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.72;
-  transform: scale(1.02);
-  transition:
-    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.65s;
+.project-panel__image{
+    position:absolute;
+    inset:0;
+
+    background-size:cover;
+    background-position:center;
+
+    transition:.45s;
+}
+
+.project-panel__image::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.10) 0%,
+            rgba(0, 0, 0, 0.714) 40%,
+            rgba(0,0,0,.82) 75%,
+            rgba(0,0,0,.96) 100%
+        );
 }
 
 .project-panel::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top:50%;
+  left:0;
+  right:0;
+  bottom:0;
   z-index: -1;
   background:
     linear-gradient(180deg, rgba(5, 5, 5, 0.16), rgba(5, 5, 5, 0.58) 44%, rgba(5, 5, 5, 0.86)),
@@ -1469,15 +1512,30 @@ a {
 }
 
 .project-panel__visual {
-  min-height: 12rem;
+  display:none;
   background: transparent !important;
 }
 
-.project-panel__body {
-  min-height: 16rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+.project-panel__body{
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+right:0;
+
+padding:1.2rem;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-end;
+
+height:45%;
+
 }
 
 .project-panel__visual svg {
@@ -1648,22 +1706,6 @@ a {
     opacity: 0.42;
     transform: translateX(10%);
   }
-}
-
-@media (max-width:1050px){
-
-  .home{
-      padding-top:4.4rem;
-  }
-
-  .project-rows{
-      grid-template-columns:1fr;
-  }
-
-  .project-row{
-      grid-auto-columns:calc(100% - 2px);
-  }
-
 }
 
 @media (max-width: 680px) {
