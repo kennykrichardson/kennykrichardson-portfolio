@@ -83,6 +83,23 @@ OCR-powered image-to-text extraction application.
 
 ---
 
+## Screenshots
+
+### Intro Boot
+![Intro](screenshots/intro_boot.jpeg)
+
+### Nexus Page
+![Nexus](screenshots/nexus_page.jpeg)
+
+### Projects Page
+![Projects](screenshots/projects_page.jpeg)
+
+### Skills Page
+![Skills](screenshots/skills_page.png)
+
+### Contact Page
+![Contact](screenshots/contact_page.png)
+
 ## 📬 Contact
 
 📧 **Email**
