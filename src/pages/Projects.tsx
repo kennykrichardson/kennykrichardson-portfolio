@@ -99,7 +99,7 @@ export function Projects() {
     <section className="page-shell projects">
       <div className="section-heading reconstruct">
         <p className="eyebrow">Showcase</p>
-        <h1 className="text-9xl font-bold"><ShuffleText text = "Projects" delay={120} /></h1>
+        <h1 className="text-9xl font-bold"><ShuffleText text = "Pro" delay={120} /><strong className="hero-pagename"><ShuffleText text = "Jects" delay={120} /></strong></h1>
       </div>
       <div className="project-rows">
         {sections.map((section) => (

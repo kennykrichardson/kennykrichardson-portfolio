@@ -17,6 +17,7 @@
     "framer-motion": "latest",
     "lenis": "latest",
     "lucide-react": "latest",
+    "motion": "^12.42.2",
     "postprocessing": "^6.39.2",
     "react": "latest",
     "react-dom": "latest",

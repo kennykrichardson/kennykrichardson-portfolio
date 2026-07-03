@@ -410,8 +410,10 @@ a {
 
 .home__portrait img{
     position:absolute;
+
     left:50%;
-    top:1rem;
+
+    top:0.5rem;
 
     width:min(36rem,42vw);
 
@@ -423,6 +425,10 @@ a {
 .hero-lastname,
 .hero-lastname * {
     color: #e50914 !important;
+}
+
+.hero-pagename * {
+    color: #3b82f6 !important;
 }
 
 .quote {
@@ -1102,12 +1108,16 @@ a {
     overflow:hidden;
   }
 
-  .home__portrait img{
+.home__portrait img{
+
     position:relative;
 
-    inset:auto;
+    left:-2.5rem;
+
+    top:-1rem;
 
     width:100%;
+
     max-width:28rem;
 
     height:auto;
@@ -1115,8 +1125,9 @@ a {
     transform:none;
 
     display:block;
+
     margin:auto;
-  }
+}
 
   .project-rows{
     grid-template-columns:1fr;
@@ -1639,17 +1650,19 @@ a {
   }
 }
 
-@media (max-width: 1050px) {
-  .home {
-    padding-top: 4.4rem;
+@media (max-width:1050px){
+
+  .home{
+      padding-top:4.4rem;
   }
 
-  .project-rows {
-    grid-template-columns: 1fr;
+  .project-rows{
+      grid-template-columns:1fr;
   }
 
-    }.project-row {
-    grid-auto-columns: calc(100% - 2px);
+  .project-row{
+      grid-auto-columns:calc(100% - 2px);
+  }
 
 }
 

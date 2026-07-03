@@ -69,3 +69,5 @@ package-lock.json
 
 # pnpm
 pnpm-lock.yaml
+
+desktop.ini
