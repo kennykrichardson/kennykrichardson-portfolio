@@ -48,8 +48,6 @@ It showcases:
 
 - 🐙 Git
 - ☁️ Render
-- ▲ Vercel
-- 🎨 Figma
 
 ---
 
