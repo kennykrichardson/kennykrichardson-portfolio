@@ -11,7 +11,7 @@ import type { PageId } from "./data/content";
 
 type PageComponent = ComponentType<{ onNavigate: (page: PageId) => void }>;
 
-const HomePage = lazy(() => import("./pages/Home").then((module) => ({ default: module.Home })));
+const HomePage = lazy(() => import("./pages/Nexus").then((module) => ({ default: module.Home })));
 const ProjectsPage = lazy(() => import("./pages/Projects").then((module) => ({ default: module.Projects })));
 const SkillsPage = lazy(() => import("./pages/Skills").then((module) => ({ default: module.Skills })));
 const ContactPage = lazy(() => import("./pages/Contact").then((module) => ({ default: module.Contact })));
