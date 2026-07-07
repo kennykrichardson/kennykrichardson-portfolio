@@ -13,22 +13,26 @@
     "@react-three/fiber": "^9.6.1",
     "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/vite": "latest",
+    "class-variance-authority": "^0.7.1",
     "clsx": "latest",
+    "cobe": "^2.0.1",
     "framer-motion": "latest",
     "lenis": "latest",
+    "lightswind": "^3.1.37",
     "lucide-react": "latest",
     "motion": "^12.42.2",
     "postprocessing": "^6.39.2",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "latest",
+    "tailwind-merge": "^3.6.0",
     "three": "^0.185.0"
   },
   "devDependencies": {
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@vitejs/plugin-react": "latest",
-    "tailwindcss": "latest",
+    "tailwindcss": "^4.3.2",
     "typescript": "latest",
     "vite": "latest"
   }
