@@ -11,6 +11,8 @@ import {
   Map,
   Presentation,
   WalletCards,
+  StarCheck,
+  Book
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import flashframeImage from "../assets/projects/flashframe.jpeg";
@@ -20,6 +22,8 @@ import nishaImage from "../assets/projects/nisha-fitness.jpg";
 import orzynImage from "../assets/projects/orzyn-ai.png";
 import quartlyImage from "../assets/projects/quartly.jpeg";
 import mnemosyneImage from "../assets/projects/mnemosyne.png";
+import habrynImage from "../assets/projects/habryn.png"
+import volumineImage from "../assets/projects/volumine.png"
 
 export type PageId = "home" | "projects" | "skills" | "contact";
 
@@ -48,6 +52,18 @@ export const projects: Project[] = [
     live: "https://orzyn-ai.onrender.com",
     image: orzynImage,
     icon: BrainCircuit,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
+    title: "Habryn Mars Colony Simulation",
+    description:
+      "A Mars Colony Simulation made with Mesa and Python to simulate living conditions in Mars, if humanity ever makes a trip to Mars possible.",
+    stack: ["Mesa", "Python", "Solara", "Blender"],
+    status: "Intelligence platform",
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/habryn-mesa-mars-colony",
+    image: habrynImage,
+    icon: StarCheck,
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
@@ -113,6 +129,18 @@ export const projects: Project[] = [
     accent: "from-red-500/45 via-zinc-100/10 to-black",
   },
   {
+    title: "Volumine Library Manager",
+    description:
+      "Java Swing Application for Library Management.",
+    stack: ["Java", "Swing", "SQLite", "React"],
+    status: "Java Swing App",
+    category: "portfolio",
+    image: volumineImage,
+    repo: "https://github.com/kennykrichardson/volumine-library-manager",
+    icon: Book,
+    accent: "from-red-500/45 via-zinc-100/10 to-black",
+  },
+  {
     title: "Nisha's Fitness Center",
     description: "Modern fitness website with high-energy motion, clean layouts, and premium visual pacing.",
     stack: ["React", "Motion", "Responsive", "Brand"],
@@ -133,18 +161,18 @@ export type SkillGroup = {
 };
 
 export const skillGroups: SkillGroup[] = [
-  { title: "Languages", icon: Code2, skills: ["JavaScript", "TypeScript", "Python", "C++"] },
+  { title: "Languages", icon: Code2, skills: ["JavaScript", "TypeScript", "Python", "C++", "Java", "Rust", "SQL", "HTML5", "CSS3"] },
   {
     title: "Frontend",
     icon: LayoutDashboard,
-    skills: ["React", "TailwindCSS", "Framer Motion", "GSAP", "Three.js", "React Three Fiber"],
+    skills: ["React", "TailwindCSS", "Framer Motion", "GSAP", "Three.js", "React Three Fiber", "ShadCN UI", "Vite", "Recharts", "PWA"],
   },
-  { title: "Backend", icon: Boxes, skills: ["Node.js", "Express", "FastAPI", "REST APIs"] },
+  { title: "Backend", icon: Boxes, skills: ["Node.js", "Express", "FastAPI", "REST APIs", "Authentication", "API Design", "Middleware"] },
   {
     title: "AI / ML",
     icon: Bot,
-    skills: ["Ollama", "Transformers.js", "LLMs", "Prompt Engineering", "Vector Databases", "Semantic Search", "OCR"],
+    skills: ["Ollama", "NLP", "Machine Learning", "Huggingface", "Jupyter Notebook", "Transformers.js", "LLMs", "Embeddings", "Prompt Engineering", "Vector Databases", "Semantic Search", "OCR", "Local AI", "Inference Pipelines"],
   },
-  { title: "Desktop", icon: Database, skills: ["Electron", "SQLite", "LanceDB", "Git", "GitHub"] },
-  { title: "Tools", icon: Globe2, skills: ["VS Code", "Postman", "Thunder Client", "Render", "Vercel"] },
+  { title: "Databases", icon: Database, skills: ["Electron", "SQLite", "LanceDB", "PostgreSQl", "Firebase", "Git", "GitHub"] },
+  { title: "Tools", icon: Globe2, skills: ["VS Code", "Postman", "Thunder Client", "Render", "Vercel", "Netlify", "Cloudfare", "npm", "pnpm", "CI/CD"] },
 ];

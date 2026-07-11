@@ -1164,14 +1164,36 @@ scrollbar-width:none;
     grid-template-columns: 1fr;
   }
 
-  .skill-grid {
-    transform: none;
+  .skill-grid{
+      transform:perspective(90rem) rotateY(8deg) translateX(.8rem);
+      transform-origin:left center;
   }
 
-  .skills__readout {
-    min-height: 12rem;
-    order: -1;
+  .skills__readout{
+      position:absolute;
+      inset:0;
+
+      display:grid;
+      place-items:center;
+
+      pointer-events:none;
+
+      z-index:0;
   }
+  }
+
+/* Half-screen laptops / snapped desktop windows */
+@media (max-width: 1350px) and (min-width: 1051px) {
+
+    .project-row{
+        gap: 1rem;
+    }
+
+    .project-panel{
+        flex: 0 0 calc((100% - 2rem) / 3) !important;
+        max-width: calc((100% - 2rem) / 3) !important;
+    }
+
 }
 
 @media (max-width: 680px) {
@@ -1816,6 +1838,27 @@ height:45%;
     overflow: visible;
     gap: .55rem;
 }
+
+.skill-card{
+    min-height: 12rem;
+    height: 12rem;
+
+    padding: .9rem;
+}
+
+.skill-card svg{
+    font-size: 1.2rem;
+    margin-bottom: .45rem;
+}
+
+.skill-card__items{
+    gap:.35rem;
+}
+
+.skill-card__items span{
+    font-size:.54rem;
+    padding:.3rem .55rem;
+}
 }
 
 .hero-object {
@@ -1836,3 +1879,20 @@ height:45%;
     height: 100%;
     transform: scale(1.15);
 }
+
+@media (max-width:1050px) and (min-width:681px){
+
+    .project-row{
+        gap:1.2rem;
+    }
+
+    .project-panel{
+
+        flex:0 0 calc((100% - 1.2rem)/2) !important;
+
+        max-width:calc((100% - 1.2rem)/2) !important;
+
+    }
+
+}
+

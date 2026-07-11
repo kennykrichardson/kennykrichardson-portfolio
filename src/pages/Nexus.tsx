@@ -6,7 +6,7 @@ import { ShuffleText } from "../components/ShuffleText";
 import type { PageId } from "../data/content";
 
 const stats = [
-  { value: "06", label: "Projects shipped", icon: Cuboid },
+  { value: "10", label: "Projects shipped", icon: Cuboid },
   { value: "03+", label: "Years learning", icon: Layers3 },
   { value: "20+", label: "Technologies explored", icon: Cpu },
   { value: "∞", label: "Zeal to build", icon: Infinity },
