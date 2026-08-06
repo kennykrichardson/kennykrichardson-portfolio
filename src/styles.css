@@ -437,7 +437,7 @@ a {
     position: absolute;
 
     left: 50%;
-    bottom: 0.5rem;
+    bottom: 1.2rem;
 
     transform: translateX(-50%);
 
@@ -472,9 +472,8 @@ a {
 }
 
 .quote em{
-    color:#ff1a1a;
-    font-style:italic;
-    white-space:nowrap;
+    color:#ff3b3b;
+    text-shadow:0 0 10px rgba(255,30,30,.45);
 }
 
 .section-heading {
