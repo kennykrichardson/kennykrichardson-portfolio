@@ -21,11 +21,11 @@ type MagneticButtonProps = {
 
   target?: React.HTMLAttributeAnchorTarget;
   rel?: string;
-
+  download?: string | boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
 };
 
-export function MagneticButton({ children, icon = "arrow", href, variant = "primary", type = "button", target, rel, onClick }: MagneticButtonProps) {
+export function MagneticButton({ children, icon = "arrow", href, variant = "primary", type = "button", target, rel, download, onClick }: MagneticButtonProps) {
   const Icon = iconMap[icon];
   const className = `magnetic-button magnetic-button--${variant}`;
   const content = (
@@ -38,7 +38,7 @@ export function MagneticButton({ children, icon = "arrow", href, variant = "prim
 
   if (href) {
     return (
-      <motion.a className={className} href={href} target={target} rel={rel} onClick={onClick} whileHover={{ y: -4 }} whileTap={{ scale: 0.96 }}>
+      <motion.a className={className} href={href} target={target} rel={rel} download={download} onClick={onClick} whileHover={{ y: -4 }} whileTap={{ scale: 0.96 }}>
         {content}
       </motion.a>
     );

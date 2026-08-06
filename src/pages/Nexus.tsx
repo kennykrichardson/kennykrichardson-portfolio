@@ -49,7 +49,7 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
           <span onClick={() => onNavigate("projects")}>
             <MagneticButton>Explore Projects</MagneticButton>
           </span>
-          <MagneticButton variant="ghost" icon="download" href="/kennykrichardsoncv.pdf" target="_blank" rel="noreferrer">
+          <MagneticButton variant="ghost" icon="download" href="/kennykrichardsoncv.pdf" download="Kenny_Richardson_Resume.pdf">
             Download Resume
           </MagneticButton>
         </motion.div>
@@ -70,10 +70,10 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
         <div className="quote">
           <b>&ldquo;</b>
           <span className="quote__text text-gradient size-xl">
-            Code is how I turn ideas into <em>reality.</em>
+            Code is how I turn ideas into <em className="no-break">reality.</em>
           </span>
         </div>
-        <img src={heroImage} alt="Kenny Richardson cinematic portrait" />
+        <img src={heroImage} alt="Kenny Richardson" />
       </motion.div>
     </section>
   );
