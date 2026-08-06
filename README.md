@@ -1,6 +1,6 @@
-# 👋 Kenny Richardson
-
 <div align="center">
+
+# 👋 Kenny Richardson
 
 # 🚀 AI Engineer • Full-Stack Developer
 
