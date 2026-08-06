@@ -15,7 +15,7 @@ import {
   Book
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import flashframeImage from "../assets/projects/flashframe.jpeg";
+import flashtextImage from "../assets/projects/flashtext.jpeg";
 import fluidDeckImage from "../assets/projects/fluid-deck.png";
 import geotrailImage from "../assets/projects/geotrail.png";
 import nishaImage from "../assets/projects/nisha-fitness.jpg";
@@ -24,6 +24,7 @@ import quartlyImage from "../assets/projects/quartly.jpeg";
 import mnemosyneImage from "../assets/projects/mnemosyne.png";
 import habrynImage from "../assets/projects/habryn.png"
 import volumineImage from "../assets/projects/volumine.png"
+import farvestImage from "../assets/projects/farvest.png"
 
 export type PageId = "home" | "projects" | "skills" | "contact";
 
@@ -48,7 +49,7 @@ export const projects: Project[] = [
     stack: ["React", "AI", "GitHub API", "Analytics"],
     status: "Intelligence platform",
     category: "portfolio",
-    repo: "https://github.com/kennykrichardson/orzyn-ai-developer-intelligence",
+    repo: "https://github.com/kennykrichardson/orzyn-ai-m2.0",
     live: "https://orzyn-ai.onrender.com",
     image: orzynImage,
     icon: BrainCircuit,
@@ -85,11 +86,23 @@ export const projects: Project[] = [
     stack: ["Tesseract.js", "OCR", "Privacy", "TypeScript"],
     status: "Local utility",
     category: "portfolio",
-    repo: "https://github.com/kennykrichardson/flashframe-ocr",
-    live: "https://flashframe-ocr.vercel.app",
-    image: flashframeImage,
+    repo: "https://github.com/kennykrichardson/flashtext-ocr",
+    live: "https://flashtext-ocr.vercel.app",
+    image: flashtextImage,
     icon: FileSearch,
     accent: "from-white/25 via-red-500/25 to-black",
+  },
+  {
+    title: "Farvest- Smart Farming Simulation",
+    description:
+      "A Smart Farming Simulation made with Mesa and Python to simulate agricultural conditions, for smart farming and agriculture.",
+    stack: ["Mesa", "Python", "Solara"],
+    status: "Intelligence platform",
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/farvest-mesa-smart-farming",
+    image: farvestImage,
+    icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
     title: "GeoTrail",

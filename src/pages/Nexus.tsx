@@ -49,7 +49,7 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
           <span onClick={() => onNavigate("projects")}>
             <MagneticButton>Explore Projects</MagneticButton>
           </span>
-          <MagneticButton variant="ghost" icon="download" href="/richardsoncv.pdf" target="_blank" rel="noreferrer">
+          <MagneticButton variant="ghost" icon="download" href="/kennykrichardsoncv.pdf" target="_blank" rel="noreferrer">
             Download Resume
           </MagneticButton>
         </motion.div>
