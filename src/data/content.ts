@@ -128,7 +128,7 @@ export const projects: Project[] = [
     stack: ["Electron", "SQLite", "LanceDB", "Local AI"],
     category: "portfolio",
     image: mnemosyneImage,
-    repo: "https://github.com/kennykrichardson/echodrive",
+    repo: "https://github.com/kennykrichardson",
     icon: Database,
     accent: "from-red-500/45 via-zinc-100/10 to-black",
   },

@@ -177,7 +177,7 @@ export function Certificates() {
   return (
     <section className="page-shell certificates page-certificates">
       <div className="section-heading reconstruct">
-        <p className="eyebrow">Showcase</p>
+        <p className="eyebrow text-crimson-400/80">Showcase</p>
         <h1 className="text-9xl font-bold"><ShuffleText text = "Certifi" delay={120} />
         <strong className="hero-lastname"><ShuffleText text = "Cates" delay={120} /></strong>
         </h1>
