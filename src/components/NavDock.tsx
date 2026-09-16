@@ -1,10 +1,15 @@
-import { Home, Layers3, Mail, TerminalSquare } from "lucide-react";
+import { Home, Layers3, Mail, TerminalSquare, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import type { PageId } from "../data/content";
 
-const items: Array<{ id: PageId; label: string; icon: typeof Home }> = [
+const items: Array<{
+  id: PageId;
+  label: string;
+  icon: typeof Home;
+}> = [
   { id: "home", label: "Home", icon: Home },
   { id: "projects", label: "Projects", icon: Layers3 },
+  { id: "certificates", label: "Honors", icon: Award },
   { id: "skills", label: "Skills", icon: TerminalSquare },
   { id: "contact", label: "Contact", icon: Mail },
 ];

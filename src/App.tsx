@@ -15,10 +15,12 @@ const HomePage = lazy(() => import("./pages/Nexus").then((module) => ({ default:
 const ProjectsPage = lazy(() => import("./pages/Projects").then((module) => ({ default: module.Projects })));
 const SkillsPage = lazy(() => import("./pages/Skills").then((module) => ({ default: module.Skills })));
 const ContactPage = lazy(() => import("./pages/Contact").then((module) => ({ default: module.Contact })));
+const CertificatesPage = lazy(() => import("./pages/Certificates").then((module) => ({ default: module.Certificates })));
 
 const pages: Record<PageId, PageComponent> = {
   home: HomePage,
   projects: ProjectsPage,
+  certificates: CertificatesPage,
   skills: SkillsPage,
   contact: ContactPage,
 };
