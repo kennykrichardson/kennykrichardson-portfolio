@@ -92,7 +92,10 @@ OCR-powered image-to-text extraction application.
 ![Nexus](screenshots/nexus_page.jpeg)
 
 ### Projects Page
-![Projects](screenshots/projects_page.jpeg)
+![Projects](screenshots/projects_page.png)
+
+### Honors Page
+![Projects](screenshots/honors_page.png)
 
 ### Skills Page
 ![Skills](screenshots/skills_page.png)
