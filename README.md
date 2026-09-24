@@ -89,7 +89,7 @@ OCR-powered image-to-text extraction application.
 ![Intro](screenshots/intro_boot.jpeg)
 
 ### Nexus Page
-![Nexus](screenshots/nexus_page.jpeg)
+![Nexus](screenshots/nexus_page.png)
 
 ### Projects Page
 ![Projects](screenshots/projects_page.png)
