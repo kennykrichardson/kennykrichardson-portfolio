@@ -4,6 +4,7 @@ import heroImage from "../assets/reference-hero.png";
 import { MagneticButton } from "../components/MagneticButton";
 import { ShuffleText } from "../components/ShuffleText";
 import type { PageId } from "../data/content";
+import GitHub from "../assets/contacts/GitHub.png";
 
 const stats = [
   { value: "20+", label: "Projects shipped", icon: Cuboid },
@@ -35,9 +36,35 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
         </motion.p>
         <motion.h1 initial={{ opacity: 0, y: 36, filter: "blur(18px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: 0.85 }}>
           <ShuffleText text="Kenny" />
-          <strong className="hero-lastname">
-            <ShuffleText text="Richardson" delay={120} />
-          </strong>
+<strong className="hero-lastname">
+  {/* Full desktop */}
+  <span className="hero-name-desktop">
+    <ShuffleText
+      text="Richardson"
+      delay={120}
+    />
+  </span>
+
+  {/* Half desktop + mobile */}
+  <span className="hero-name-github">
+    <ShuffleText
+      text="Richardson"
+      delay={120}
+      replaceIndex={8}
+      replaceElement={
+        <a
+          href="https://github.com/kennykrichardson"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="shuffle-github"
+        >
+          <img src={GitHub} alt="" />
+        </a>
+      }
+    />
+  </span>
+</strong>
         </motion.h1>
         <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55 }}>
           AI Engineer & Full-Stack Developer

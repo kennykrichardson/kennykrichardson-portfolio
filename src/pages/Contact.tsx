@@ -1,9 +1,12 @@
-import { Mail } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { MagneticButton } from "../components/MagneticButton";
 import { ShuffleText } from "../components/ShuffleText";
 import { useState } from "react";
+import Email from "../assets/contacts/Email.png";
+import GitHub from "../assets/contacts/GitHub.png";
+import LinkedIn from "../assets/contacts/LinkedIn.png";
+
+
 
 export function Contact() {
 const [form, setForm] = useState({
@@ -54,17 +57,32 @@ ${form.message}`;
           Whether you're hiring for an engineering role, launching an AI product,
           or looking for a developer to bring an idea to life, I'd love to hear about it.⚡
           </p>
-          <div className="contact__links">
-            <a href="mailto:kennykrichardson@gmail.com">
-              <Mail size={18} /> Email
-            </a>
-            <a href="https://github.com/kennykrichardson" target="_blank" rel="noreferrer">
-              <FaGithub size={18} /> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/kenny-richardson-kodipally-250501217/" target="_blank" rel="noreferrer">
-              <FaLinkedin size={18} /> LinkedIn
-            </a>
-          </div>
+<div className="contact__links">
+  <a
+    href="mailto:kennykrichardson@gmail.com"
+    aria-label="Email"
+  >
+    <img src={Email} alt="" />
+  </a>
+
+  <a
+    href="https://github.com/kennykrichardson"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="GitHub"
+  >
+    <img src={GitHub} alt="" />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/kenny-richardson-kodipally-250501217/"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="LinkedIn"
+  >
+    <img src={LinkedIn} alt="" />
+  </a>
+</div>
         </div>
         <form className="contact-form">
           <label>

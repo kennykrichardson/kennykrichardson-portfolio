@@ -247,9 +247,9 @@ a {
   text-transform: uppercase;
 }
 
-.home h1 span,
-.home h1 strong,
-.home h1 em {
+.home h1 > span,
+.home h1 > strong,
+.home h1 > em {
   display: block;
 }
 
@@ -432,6 +432,53 @@ a {
 .hero-lastname,
 .hero-lastname * {
     color: #e50914 !important;
+}
+
+/* Full desktop */
+.home h1 .hero-name-desktop {
+  display: block !important;
+}
+
+.home h1 .hero-name-github {
+  display: none !important;
+}
+
+/* GitHub replacement */
+.home h1 .shuffle-text__replacement {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 0.78em;
+  height: 0.78em;
+  margin: 0 0.02em;
+  vertical-align: -0.02em;
+}
+
+.home h1 .shuffle-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.home h1 .shuffle-github img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Half desktop + mobile */
+@media (max-width: 1350px) {
+  .home h1 .hero-name-desktop {
+    display: none !important;
+  }
+
+  .home h1 .hero-name-github {
+    display: block !important;
+  }
 }
 
 .hero-pagename * {
@@ -758,20 +805,36 @@ scrollbar-width:none;
 
 .contact__links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  align-items: center;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
 .contact__links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  padding: 0.65rem 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.055);
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 0.75rem;
+  background: transparent;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.contact__links a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.contact__links a:hover {
+  transform: translateY(-4px) scale(1.06);
+  filter: brightness(1.15);
 }
 
 .contact-form {
@@ -1643,11 +1706,6 @@ height:45%;
 .contact-form textarea:focus {
   border-color: rgba(var(--page-accent-rgb), 0.72);
   box-shadow: 0 0 35px rgba(var(--page-accent-rgb), 0.16);
-}
-
-.contact__links a:hover {
-  color: #050505;
-  background: var(--page-accent);
 }
 
 .dock {
