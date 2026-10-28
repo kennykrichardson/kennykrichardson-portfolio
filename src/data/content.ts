@@ -215,7 +215,7 @@ export const projects: Project[] = [
   },
   {
     title: "My Own Portfolio Website",
-    description: "Personal Portfolio Website",
+    description: "Personal Portfolio Website.",
     stack: ["React", "TypeScript", "React-Drei"],
     category: "commercial",
     repo: "https://github.com/kennykrichardson/kennykrichardson-portfolio",
