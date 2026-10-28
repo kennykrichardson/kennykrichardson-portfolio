@@ -83,7 +83,7 @@ export const projects: Project[] = [
   },
   {
     title: "Nyxora AI",
-    description: "Fine-tuned LLM-Powered World Generator for Writers.",
+    description: "Fine-tuned LLM-Powered World Generator.",
     stack: ["Python", "Local LLM", "PyTorch", "React"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/nyxora-ai-world-generator",
