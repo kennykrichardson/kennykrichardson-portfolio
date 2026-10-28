@@ -61,7 +61,7 @@ export const projects: Project[] = [
   },
   {
     title: "Lexyra AI",
-    description:"AI-Powered Writing Assistant",
+    description:"AI-Powered Writing Assistant.",
     stack: ["Python", "AI API", "React", "TypeScript"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/lexyra-ai-writing-assistant",
@@ -115,7 +115,7 @@ export const projects: Project[] = [
   },
   {
     title: "FlashFrame OCR",
-    description: "Privacy-first OCR application built with Tesseract.js",
+    description: "OCR application built with Tesseract.js",
     stack: ["Tesseract.js", "OCR", "TypeScript"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/flashtext-ocr",
