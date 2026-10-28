@@ -4,7 +4,7 @@ import fluidDeckImage from "../assets/projects/fluid-deck.png";
 import geotrailImage from "../assets/projects/geotrail.png";
 import nishaImage from "../assets/projects/nisha-fitness.jpg";
 import orzynImage from "../assets/projects/orzyn-ai.png";
-import quartlyImage from "../assets/projects/quartly.jpeg";
+import quartlyImage from "../assets/projects/quartly.png";
 import mnemosyneImage from "../assets/projects/mnemosyne.png";
 import habrynImage from "../assets/projects/habryn.png"
 import volumineImage from "../assets/projects/volumine.png"
@@ -78,17 +78,6 @@ export const projects: Project[] = [
     repo: "https://github.com/kennykrichardson/regenesis-ai",
     live: "https://regenesis-ai.onrender.com",
     image: regenesisImage,
-    icon: StarCheck,
-    accent: "from-red-500/50 via-white/10 to-red-950/20",
-  },
-  {
-    title: "FolderSapling",
-    description: "App that converts Folder Trees into constructed ZIPs.",
-    stack: ["React", "TSX", "TypeScript"],
-    category: "portfolio",
-    repo: "https://github.com/kennykrichardson/habryn-mesa-mars-colony",
-    live: "https://foldersapling.onrender.com",
-    image: foldersaplingImage,
     icon: StarCheck,
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
@@ -190,6 +179,17 @@ export const projects: Project[] = [
     repo: "https://github.com/kennykrichardson/volumine-library-manager",
     icon: Book,
     accent: "from-red-500/45 via-zinc-100/10 to-black",
+  },
+  {
+    title: "FolderSapling",
+    description: "App that converts Folder Trees into constructed ZIPs.",
+    stack: ["React", "TSX", "TypeScript"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/habryn-mesa-mars-colony",
+    live: "https://foldersapling.onrender.com",
+    image: foldersaplingImage,
+    icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
     title: "Nisha's Fitness Studio",
