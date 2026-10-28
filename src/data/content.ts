@@ -1,3 +1,20 @@
+import type { LucideIcon } from "lucide-react";
+import flashtextImage from "../assets/projects/flashtext.jpeg";
+import fluidDeckImage from "../assets/projects/fluid-deck.png";
+import geotrailImage from "../assets/projects/geotrail.png";
+import nishaImage from "../assets/projects/nisha-fitness.jpg";
+import orzynImage from "../assets/projects/orzyn-ai.png";
+import quartlyImage from "../assets/projects/quartly.jpeg";
+import mnemosyneImage from "../assets/projects/mnemosyne.png";
+import habrynImage from "../assets/projects/habryn.png"
+import volumineImage from "../assets/projects/volumine.png"
+import farvestImage from "../assets/projects/farvest.png"
+import lexyraImage from "../assets/projects/lexyra.png"
+import regenesisImage from "../assets/projects/regenesis.jpeg"
+import foldersaplingImage from "../assets/projects/foldersapling.png"
+import nyxoraImage from "../assets/projects/nyxora.png"
+import kennykrichardsonImage from "../assets/projects/kennykrichardson.png"
+import clenzoraImage from "../assets/projects/clenzora.png"
 import {
   Bot,
   Boxes,
@@ -14,17 +31,6 @@ import {
   StarCheck,
   Book
 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
-import flashtextImage from "../assets/projects/flashtext.jpeg";
-import fluidDeckImage from "../assets/projects/fluid-deck.png";
-import geotrailImage from "../assets/projects/geotrail.png";
-import nishaImage from "../assets/projects/nisha-fitness.jpg";
-import orzynImage from "../assets/projects/orzyn-ai.png";
-import quartlyImage from "../assets/projects/quartly.jpeg";
-import mnemosyneImage from "../assets/projects/mnemosyne.png";
-import habrynImage from "../assets/projects/habryn.png"
-import volumineImage from "../assets/projects/volumine.png"
-import farvestImage from "../assets/projects/farvest.png"
 
 export type PageId = "home" | "projects" | "certificates" | "skills" | "contact";
 
@@ -48,15 +54,57 @@ export const projects: Project[] = [
     stack: ["React", "AI", "GitHub API", "Analytics"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/orzyn-ai-m2.0",
-    live: "https://orzyn-ai.onrender.com",
+    live: "https://orzyn.onrender.com",
     image: orzynImage,
     icon: BrainCircuit,
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
+    title: "Lexyra AI",
+    description:"AI-Powered Writing Assistant",
+    stack: ["Python", "AI API", "React", "TypeScript"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/lexyra-ai-writing-assistant",
+    live: "https://lexyra.onrender.com",
+    image: lexyraImage,
+    icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
+    title: "Regenesis AI",
+    description: "AI-Powered GitHub prompt Reconstructor for developers.",
+    stack: ["Python", "AI", "GitHub API", "TypeScript"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/regenesis-ai",
+    live: "https://regenesis-ai.onrender.com",
+    image: regenesisImage,
+    icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
+    title: "FolderSapling",
+    description: "App that converts Folder Trees into constructed ZIPs.",
+    stack: ["React", "TSX", "TypeScript"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/habryn-mesa-mars-colony",
+    live: "https://foldersapling.onrender.com",
+    image: foldersaplingImage,
+    icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
+    title: "Nyxora AI",
+    description: "Fine-tuned LLM-Powered World Generator for Writers.",
+    stack: ["Python", "Local LLM", "PyTorch", "React"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/nyxora-ai-world-generator",
+    image: nyxoraImage,
+    icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
     title: "Habryn Mars",
-    description:
-      "A Mars Colony Sim made with Mesa and Python.",
+    description: "Mars Colony Sim made with Mesa and Python.",
     stack: ["Mesa", "Python", "Solara", "Blender"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/habryn-mesa-mars-colony",
@@ -151,6 +199,28 @@ export const projects: Project[] = [
     repo: "https://github.com/kennykrichardson/nishas-fitness-studio",
     live: "https://nishasfitness.onrender.com",
     image: nishaImage,
+    icon: Dumbbell,
+    accent: "from-red-500/50 via-orange-100/10 to-black",
+  },
+  {
+    title: "Clenzora PL Prime",
+    description: "E-commerce website for a Cleaning Products Brand.",
+    stack: ["React", "APIs", "Supabase"],
+    category: "commercial",
+    repo: "https://github.com/kennykrichardson",
+    live: "https://clenzoraclean.com",
+    image: clenzoraImage,
+    icon: Dumbbell,
+    accent: "from-red-500/50 via-orange-100/10 to-black",
+  },
+  {
+    title: "My Own Portfolio Website",
+    description: "Personal Portfolio Website",
+    stack: ["React", "TypeScript", "React-Drei"],
+    category: "commercial",
+    repo: "https://github.com/kennykrichardson/kennykrichardson-portfolio",
+    live: "https://kennykrichardson.onrender.com",
+    image: kennykrichardsonImage,
     icon: Dumbbell,
     accent: "from-red-500/50 via-orange-100/10 to-black",
   },
