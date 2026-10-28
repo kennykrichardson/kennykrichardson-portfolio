@@ -53,15 +53,34 @@ It showcases:
 
 ## 📂 Featured Projects
 
-### 💰 Quartly
+### 💰 Lexyra AI
 
-AI-powered finance tracker with modern analytics and budgeting.
+AI-Powered Writing Assistant that helps turn incoherent sentences into actual meaningful ones while keeping the writer's identity and tone.
 
 ---
+
 
 ### 🤖 Orzyn AI
 
 Developer Intelligence Platform for repository analytics and engineering insights.
+
+---
+
+### 🤖 Regenesis AI
+
+Developer Repository Recreation Platform.
+
+---
+
+### 🤖 Nyxora AI
+
+Fine-tuned LLM-Powered World Generator that helps writers generate an entire world of stories.
+
+---
+
+### 💰 Quartly
+
+AI-powered finance tracker with modern analytics and budgeting.
 
 ---
 
@@ -77,7 +96,7 @@ AI-powered PowerPoint parser and presentation intelligence.
 
 ---
 
-### 📸 FlashFrame
+### 📸 FlashText
 
 OCR-powered image-to-text extraction application.
 
