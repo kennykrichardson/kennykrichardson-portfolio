@@ -114,7 +114,7 @@ export const projects: Project[] = [
     accent: "from-red-400/45 via-rose-200/10 to-black",
   },
   {
-    title: "FlashFrame OCR",
+    title: "FlashText OCR",
     description: "OCR application built with Tesseract.js",
     stack: ["Tesseract.js", "OCR", "TypeScript"],
     category: "portfolio",
