@@ -1,38 +1,44 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Character Encoding -->
+    <!-- Character encoding and responsive layout -->
     <meta charset="UTF-8" />
-
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Theme -->
     <meta name="theme-color" content="#050505" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Google Search Console verification -->
+    <meta
+      name="google-site-verification"
+      content="wdpJILycECpySr05_4fzGhK5r75ombkyNRIyUVb9jv8"
+    />
 
-    <!-- SEO -->
-    <title>Kenny Richardson • AI Engineer & Full-Stack Developer</title>
-
+    <!-- Primary SEO -->
+    <title>Kenny Richardson | AI Engineer & Full-Stack Developer</title>
     <meta
       name="description"
-      content="AI Engineer & Full-Stack Developer building AI-powered software, desktop applications, developer tools, and immersive web experiences."
+      content="Explore the portfolio of Kenny Richardson, an AI Engineer and Full-Stack Developer building AI-powered software, desktop applications, developer tools, and immersive web experiences."
     />
-
     <meta
       name="keywords"
-      content="Kenny Richardson, AI Engineer, Full Stack Developer, React, TypeScript, Python, Portfolio, Three.js, Machine Learning, AI"
+      content="Kenny Richardson, kennykrichardson, Kenny Richardson Kodipally, AI Engineer, Full-Stack Developer, React, TypeScript, Python, Machine Learning, Artificial Intelligence, Portfolio"
     />
-
     <meta name="author" content="Kenny Richardson" />
+    <meta name="creator" content="Kenny Richardson" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kennykrichardson.onrender.com/" />
+
+    <!-- Site icons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kenny Richardson" />
     <meta
       property="og:title"
-      content="Kenny Richardson • AI Engineer & Full-Stack Developer"
+      content="Kenny Richardson | AI Engineer & Full-Stack Developer"
     />
     <meta
       property="og:description"
@@ -40,18 +46,20 @@
     />
     <meta
       property="og:image"
-      content="https://kennykrichardson.onrender.com/preview.png"
+      content="https://kennykrichardson.onrender.com/og-image.png"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
       property="og:url"
-      content="https://kennykrichardson.onrender.com"
+      content="https://kennykrichardson.onrender.com/"
     />
 
-    <!-- Twitter -->
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Kenny Richardson • AI Engineer & Full-Stack Developer"
+      content="Kenny Richardson | AI Engineer & Full-Stack Developer"
     />
     <meta
       name="twitter:description"
@@ -59,16 +67,36 @@
     />
     <meta
       name="twitter:image"
-      content="https://kennykrichardson.onrender.com/preview.png"
+      content="https://kennykrichardson.onrender.com/og-image.png"
     />
 
-    <!-- Robots -->
-    <meta name="robots" content="index, follow" />
+    <!-- Structured data: personal portfolio and creator identity -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Kenny Richardson | AI Engineer & Full-Stack Developer",
+        "url": "https://kennykrichardson.onrender.com/",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Kenny Richardson",
+          "alternateName": [
+            "kennykrichardson",
+            "Kenny Richardson Kodipally"
+          ],
+          "jobTitle": "AI Engineer & Full-Stack Developer",
+          "url": "https://kennykrichardson.onrender.com/",
+          "sameAs": [
+            "https://github.com/kennykrichardson",
+            "https://linkedin.com/in/kennykrichardson"
+          ]
+        }
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
-
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
