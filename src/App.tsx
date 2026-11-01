@@ -51,6 +51,35 @@ function App() {
 
   return (
     <div className={`app page-${activePage}`}>
+      <style>{`
+        /* Keep both animated backgrounds in separate, predictable layers. */
+        .app .particle-network {
+          position: fixed !important;
+          inset: 0 !important;
+          z-index: 0 !important;
+        }
+        .app .webgl-layer {
+          position: fixed !important;
+          inset: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+          z-index: 1 !important;
+          pointer-events: none !important;
+        }
+        .app .webgl-layer canvas {
+          display: block !important;
+          width: 100% !important;
+          height: 100% !important;
+        }
+        .app > main {
+          position: relative;
+          z-index: 2;
+        }
+        /* Preserve the topbar's original positioning from styles.css. */
+        .app > .topbar {
+          z-index: 10;
+        }
+      `}</style>
       <ParticleField />
       {activePage !== "home" && <div className="ambient-moon" aria-hidden="true" />}
       <CursorGlow />
