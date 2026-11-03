@@ -8,7 +8,7 @@ import redMoon from "../assets/redmoon.png";
 import hero from "../assets/hero.png";
 
 const stats = [
-  { value: "20+", label: "Projects shipped", icon: Cuboid },
+  { value: "25+", label: "Projects shipped", icon: Cuboid },
   { value: "03+", label: "Years learning", icon: Layers3 },
   { value: "20+", label: "Technologies explored", icon: Cpu },
   { value: "∞", label: "Zeal to build", icon: Infinity },
