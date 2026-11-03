@@ -1,10 +1,10 @@
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Cpu, Cuboid, Infinity, Layers3 } from "lucide-react";
-import heroImage from "../assets/reference-hero.png";
 import { MagneticButton } from "../components/MagneticButton";
 import { ShuffleText } from "../components/ShuffleText";
 import type { PageId } from "../data/content";
-import GitHub from "../assets/contacts/GitHub.png";
+import { NeuralLink } from "../components/NeuralLink";
+import redMoon from "../assets/redmoon.png";
 
 const stats = [
   { value: "20+", label: "Projects shipped", icon: Cuboid },
@@ -14,57 +14,19 @@ const stats = [
 ];
 
 export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const springX = useSpring(mouseX, { stiffness: 70, damping: 18 });
-  const springY = useSpring(mouseY, { stiffness: 70, damping: 18 });
-  const imageX = useTransform(springX, [-0.5, 0.5], [16, -16]);
-  const imageY = useTransform(springY, [-0.5, 0.5], [-10, 10]);
 
   return (
-    <section
-      className="home page-shell"
-      onPointerMove={(event) => {
-        const rect = event.currentTarget.getBoundingClientRect();
-        mouseX.set((event.clientX - rect.left) / rect.width - 0.5);
-        mouseY.set((event.clientY - rect.top) / rect.height - 0.5);
-      }}
-    >
+    <section className="home page-shell">
       <div className="home__copy reconstruct">
+        <img className="home__moon" src={redMoon} alt="" aria-hidden="true" />
         <motion.p className="eyebrow" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}>
           Hey, I&apos;m
         </motion.p>
         <motion.h1 initial={{ opacity: 0, y: 36, filter: "blur(18px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: 0.85 }}>
           <ShuffleText text="Kenny" />
-<strong className="hero-lastname">
-  {/* Full desktop */}
-  <span className="hero-name-desktop">
-    <ShuffleText
-      text="Richardson"
-      delay={120}
-    />
-  </span>
-
-  {/* Half desktop + mobile */}
-  <span className="hero-name-github">
-    <ShuffleText
-      text="Richardson"
-      delay={120}
-      replaceIndex={8}
-      replaceElement={
-        <a
-          href="https://github.com/kennykrichardson"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          className="shuffle-github"
-        >
-          <img src={GitHub} alt="" />
-        </a>
-      }
-    />
-  </span>
-</strong>
+          <strong className="hero-lastname">
+            <ShuffleText text="Richardson" delay={120} />
+          </strong>
         </motion.h1>
         <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55 }}>
           AI Engineer & Full-Stack Developer
@@ -78,6 +40,9 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
           </span>
           <MagneticButton variant="ghost" icon="download" href="/kennykrichardsoncv.pdf" download="Kenny_Richardson_Resume.pdf">
             Download Resume
+          </MagneticButton>
+          <MagneticButton href="https://github.com/kennykrichardson" icon="github">
+            <span className="sr-only">GitHub</span>
           </MagneticButton>
         </motion.div>
         <motion.div className="stats" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.08 }}>
@@ -93,15 +58,32 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
           })}
         </motion.div>
       </div>
-      <motion.div className="home__portrait" style={{ x: imageX, y: imageY }} initial={{ opacity: 0, x: 70, filter: "blur(20px)" }} animate={{ opacity: 1, x: 0, filter: "blur(0px)" }} transition={{ duration: 1.1, delay: 0.25 }}>
-        <div className="quote">
-          <b>&ldquo;</b>
-          <span className="quote__text text-gradient size-xl">
-            Code is how I turn ideas into <em className="no-break">reality.</em>
-          </span>
+      <motion.aside
+        className="neural-links-stage"
+        initial={{ opacity: 0, x: 54, filter: "blur(16px)" }}
+        animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+        transition={{ duration: 1, delay: 0.3 }}
+        aria-label="More websites by Kenny Richardson"
+      >
+        <img
+          className="neural-links-backdrop"
+          src="src/assets/reference-hero.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div className="neural-links-list">
+          <NeuralLink
+            href="https://kennykrichardson-ai.onrender.com"
+            label="Check out my AI Portfolio"
+            index="01"
+          />
+          <NeuralLink
+            href="https://kennykrichardson-ml.onrender.com"
+            label="Check out my ML Projects"
+            index="02"
+          />
         </div>
-        <img src={heroImage} alt="Kenny Richardson" />
-      </motion.div>
+      </motion.aside>
     </section>
   );
 }
