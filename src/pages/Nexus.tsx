@@ -5,6 +5,7 @@ import { ShuffleText } from "../components/ShuffleText";
 import type { PageId } from "../data/content";
 import { NeuralLink } from "../components/NeuralLink";
 import redMoon from "../assets/redmoon.png";
+import hero from "../assets/hero.png";
 
 const stats = [
   { value: "20+", label: "Projects shipped", icon: Cuboid },
@@ -67,7 +68,7 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
       >
         <img
           className="neural-links-backdrop"
-          src="src/assets/reference-hero.png"
+          src={hero}
           alt=""
           aria-hidden="true"
         />

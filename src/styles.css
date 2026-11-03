@@ -2840,7 +2840,7 @@ height:45%;
   pointer-events: none;
   user-select: none;
 
-  width: clamp(22rem, 38vw, 36rem);
+  width: clamp(22rem, 41vw, 39rem);
   max-width: none;
   height: auto;
 
