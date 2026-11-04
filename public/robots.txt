@@ -16,4 +16,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://kennykrichardson.onrender.com/sitemap.xml
+Sitemap: https://kennykrichardson.com/sitemap.xml
