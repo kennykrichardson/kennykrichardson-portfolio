@@ -42,7 +42,10 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
           <MagneticButton variant="ghost" icon="download" href="/kennykrichardsoncv.pdf" download="Kenny_Richardson_Resume.pdf">
             Download Resume
           </MagneticButton>
-          <MagneticButton href="https://github.com/kennykrichardson" icon="github">
+          <MagneticButton
+            href="https://github.com/kennykrichardson"
+            icon="github"
+          >
             <span className="sr-only">GitHub</span>
           </MagneticButton>
         </motion.div>

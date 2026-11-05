@@ -420,22 +420,23 @@ const CASCADE_CSS = `
       opacity: 0.5;
     }
 
+    /* Mobile: keep the next project on the right and the previous on the left. */
     .project-cascade-card.is-next {
-      transform: translate(-92%, -50%) scale(0.5);
-    }
-
-    .project-cascade-card.is-prev {
       transform: translate(-8%, -50%) scale(0.5);
     }
 
-    .project-cascade-card.is-next-2,
-    .project-cascade-card.is-prev-2 {
+    .project-cascade-card.is-prev {
+      transform: translate(-92%, -50%) scale(0.5);
+    }
+
+    .project-cascade-card.is-next-2 {
       opacity: 0.34;
-      transform: translate(-135%, -50%) scale(0.32);
+      transform: translate(35%, -50%) scale(0.32);
     }
 
     .project-cascade-card.is-prev-2 {
-      transform: translate(35%, -50%) scale(0.32);
+      opacity: 0.34;
+      transform: translate(-135%, -50%) scale(0.32);
     }
 
     .projects-cascade__arrow {

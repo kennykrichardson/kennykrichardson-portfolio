@@ -795,3 +795,90 @@
     display: none;
   }
 }
+
+/* Mobile carousel: one full-width certificate per view.
+   Each card occupies the complete scroll viewport, so the next card
+   cannot peek into the frame. */
+@media (max-width: 820px) {
+  .page-certificates .certificate-carousel {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .page-certificates .certificate-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    justify-content: start;
+    gap: 0;
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem 0 1rem;
+    box-sizing: border-box;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .page-certificates .certificate-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .page-certificates .certificate-arrow {
+    top: 50%;
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(-50%);
+    line-height: 0;
+  }
+
+  .page-certificates .certificate-arrow--left {
+    left: 0.2rem;
+    right: auto;
+  }
+
+  .page-certificates .certificate-arrow--right {
+    right: 0.2rem;
+    left: auto;
+  }
+
+  .page-certificates .certificate-arrow svg {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0;
+  }
+}
+
+/* Touch browsers can keep :hover on the card that was touched first.
+   Disable hover-only visuals on touch; tapping the card still opens it. */
+@media (max-width: 820px) and (hover: none), (max-width: 820px) and (pointer: coarse) {
+  .page-certificates .certificate-card,
+  .page-certificates .certificate-card:hover,
+  .page-certificates .certificate-card:active {
+    transform: none !important;
+  }
+
+  .page-certificates .certificate-card__expand,
+  .page-certificates .certificate-card:hover .certificate-card__expand {
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+  .page-certificates .certificate-arrow:hover {
+    transform: translateY(-50%);
+    border-color: rgba(255,255,255,.24);
+    color: #fff;
+    box-shadow: none;
+  }
+}
