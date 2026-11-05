@@ -26,7 +26,7 @@
     "react-dom": "latest",
     "react-icons": "latest",
     "tailwind-merge": "^2.6.1",
-    "three": "^0.185.0"
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@types/react": "latest",
