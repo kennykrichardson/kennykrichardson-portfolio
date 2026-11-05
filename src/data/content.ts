@@ -214,7 +214,7 @@ export const projects: Project[] = [
     accent: "from-red-500/50 via-orange-100/10 to-black",
   },
   {
-    title: "My Own Portfolio Website",
+    title: "My Own Portfolio Website ;)",
     description: "Personal Portfolio Website.",
     stack: ["React", "TypeScript", "React-Drei"],
     category: "commercial",

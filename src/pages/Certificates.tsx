@@ -226,8 +226,8 @@ export function Certificates() {
           </div>
           <i />
           <div>
-            <strong>∞</strong>
-            <span>Continuous<br />Learning</span>
+            <strong>ㅤ∞</strong>
+            <span>ㅤㅤㅤContinuous<br />ㅤㅤㅤLearning</span>
           </div>
         </div>
       </div>

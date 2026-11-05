@@ -10,7 +10,7 @@ import hero from "../assets/hero.png";
 const stats = [
   { value: "25+", label: "Projects shipped", icon: Cuboid },
   { value: "03+", label: "Years learning", icon: Layers3 },
-  { value: "20+", label: "Technologies explored", icon: Cpu },
+  { value: "30+", label: "Technologies explored", icon: Cpu },
   { value: "∞", label: "Zeal to build", icon: Infinity },
 ];
 
@@ -77,12 +77,12 @@ export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
         />
         <div className="neural-links-list">
           <NeuralLink
-            href="https://kennykrichardson-ai.onrender.com"
+            href="https://ai.kennykrichardson.com"
             label="Check out my AI Portfolio"
             index="01"
           />
           <NeuralLink
-            href="https://kennykrichardson-ml.onrender.com"
+            href="https://ml.kennykrichardson.com"
             label="Check out my ML Projects"
             index="02"
           />
