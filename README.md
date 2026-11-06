@@ -7,7 +7,7 @@
 Building intelligent software, developer tools, desktop applications, and immersive web experiences.
 
 🌐 **Portfolio**
-https://kennykrichardson.com
+https://www.kennykrichardson.com
 
 </div>
 
