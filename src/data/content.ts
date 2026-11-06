@@ -72,7 +72,7 @@ export const projects: Project[] = [
   },
   {
     title: "Habryn Mars",
-    description: "Mars Colony Sim made with Mesa and Python.",
+    description: "Mars Colony Sim made with Python and PyGame.",
     stack: ["Python", "PyGame", "Ruff", "Pytest"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/habryn-mesa-mars-colony",
