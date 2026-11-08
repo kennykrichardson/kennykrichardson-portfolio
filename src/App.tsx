@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Lenis from "lenis";
 import { Suspense, lazy, useCallback, useEffect, useMemo, useState, type ComponentType } from "react";
 import { BootIntro } from "./components/BootIntro";
-import { CursorGlow } from "./components/CursorGlow";
+import GlowCursor from "./components/GlowCursor";
 import { NavDock } from "./components/NavDock";
 import { PageTransition } from "./components/PageTransition";
 import { ParticleField } from "./components/ParticleField";
@@ -53,7 +53,22 @@ function App() {
     <div className={`app page-${activePage}`}>
       <ParticleField />
       {activePage !== "home" && <div className="ambient-moon" aria-hidden="true" />}
-      <CursorGlow />
+      <GlowCursor
+        className="glow-cursor--viewport"
+        color="#e50914"
+        secondaryColor="#e50914"
+        intensity={1.0}
+        trailWidth={2.75}
+        linger={1.2}
+        glow={1.0}
+        hotspot={0.85}
+        followSpeed={1}
+        grain={0.05}
+        clickBurst
+        quality="high"
+        theme="dark"
+        maxDevicePixelRatio={1.75}
+      />
       <div className="global-grain" />
       <header className="topbar">
         <span></span>
