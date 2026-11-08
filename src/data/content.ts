@@ -119,7 +119,7 @@ export const projects: Project[] = [
     stack: ["Tesseract.js", "OCR", "TypeScript"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/flashtext-ocr",
-    live: "https://flashtext-ocr.vercel.app",
+    live: "https://flashtext.kennykrichardson.com",
     image: flashtextImage,
     icon: FileSearch,
     accent: "from-white/25 via-red-500/25 to-black",
