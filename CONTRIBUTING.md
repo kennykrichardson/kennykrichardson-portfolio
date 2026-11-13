@@ -15,4 +15,4 @@ please feel free to open an Issue.
 
 For security-related concerns, please refer to the SECURITY.md document.
 
-Thank you for your interest!
+Thank you for your interest!  
