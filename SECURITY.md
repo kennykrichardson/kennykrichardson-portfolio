@@ -9,7 +9,7 @@ Security updates are provided only for the latest version of this project.
 | Latest | ✅ |
 | Older Releases | ❌ |
 
----
+--- 
 
 ## Reporting a Vulnerability
 
