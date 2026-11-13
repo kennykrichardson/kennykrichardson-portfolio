@@ -51,76 +51,68 @@ It showcases:
 
 ---
 
-## 📂 Featured Projects
+## 🚀 Featured Projects
 
-### 💰 Lexyra AI
+### 🐤 Proximal Flap - Autonomous Flight PPO
 
-AI-Powered Writing Assistant that helps turn incoherent sentences into actual meaningful ones while keeping the writer's identity and tone.
+Proximal Flap is a Flappy Bird simulation featuring a PPO-trained reinforcement learning agent for autonomous flight, procedural obstacle generation and intelligent decision making.
 
----
+### ✍️ Lexyra AI
 
+An AI-powered writing assistant that transforms rough drafts into clear,
+meaningful writing while preserving the writer's voice and tone.
 
 ### 🤖 Orzyn AI
 
-Developer Intelligence Platform for repository analytics and engineering insights.
+A developer intelligence platform focused on repository analytics and
+engineering insights.
 
----
+### ♻️ Regenesis AI
 
-### 🤖 Regenesis AI
+A developer repository recreation platform designed to help reconstruct
+useful project context.
 
-Developer Repository Recreation Platform.
+### 🌍 Nyxora AI
 
----
+A fine-tuned, LLM-powered world generator built to help writers explore
+and create story worlds.
 
-### 🤖 Nyxora AI
+### 💸 Quartly
 
-Fine-tuned LLM-Powered World Generator that helps writers generate an entire world of stories.
+A personal finance tracker with modern analytics and budgeting features.
 
----
+### 📊 Fluid Deck AI
 
-### 💰 Quartly
-
-AI-powered finance tracker with modern analytics and budgeting.
-
----
-
-### 🗺 GeoTrail
-
-Interactive travel exploration platform.
-
----
-
-### 📄 Fluid Deck
-
-AI-powered PowerPoint parser and presentation intelligence.
-
----
+An AI-powered PowerPoint parser exploring presentation intelligence and
+document automation.
 
 ### 📸 FlashText
 
-OCR-powered image-to-text extraction application.
+An OCR-powered application that extracts text from images.
+
+------------------------------------------------------------------------
 
 ---
 
 ## Screenshots
 
 ### Intro Boot
-![Intro](screenshots/intro_boot.jpeg)
+![Intro](screenshots/intro-boot.jpeg)
 
 ### Nexus Page
-![Nexus](screenshots/nexus_page.png)
+![Nexus](screenshots/nexus-page.png)
 
 ### Projects Page
-![Projects](screenshots/projects_page.png)
+![Projects](screenshots/projects-page.png)
 
 ### Honors Page
-![Projects](screenshots/honors_page.png)
+![Projects](screenshots/honors-page.png)
 
 ### Skills Page
-![Skills](screenshots/skills_page.png)
+![Skills](screenshots/skills-page.png)
 
 ### Contact Page
-![Contact](screenshots/contact_page.png)
+![Contact](screenshots/contact-page.png)
 
 ## 📬 Contact
 
