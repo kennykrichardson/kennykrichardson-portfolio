@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050505" />
 
-    
+
     <script>
       if (window.location.hostname === "kennykrichardson.onrender.com") {
         window.location.replace(
-          "https://kennykrichardson.com" +
+          "https://www.kennykrichardson.com" +
           window.location.pathname +
           window.location.search +
           window.location.hash
@@ -25,19 +25,19 @@
       content="wdpJILycECpySr05_4fzGhK5r75ombkyNRIyUVb9jv8"
     />
 
-    <!-- Primary SEO -->
-    <title>Kenny Richardson Kodipally • AI Engineer & Full-Stack Developer</title>
+    <!-- Primary SEO: establish the exact kennykrichardson identity -->
+    <title>Kenny Richardson Kodipally (@kennykrichardson) | AI Engineer & Full-Stack Developer</title>
     <meta
       name="description"
-      content="Explore the portfolio of Kenny Richardson Kodipally, an AI Engineer and Full-Stack Developer building AI-powered software, desktop applications, developer tools, and immersive web experiences."
+      content="Kenny Richardson, known online as kennykrichardson, is an AI Engineer and Full-Stack Developer building AI-powered software, developer tools, desktop applications, and immersive web experiences."
     />
     <meta
       name="keywords"
-      content="Kenny Richardson, kennykrichardson, Kenny Richardson Kodipally, AI Engineer, Full-Stack Developer, React, TypeScript, Python, Machine Learning, Artificial Intelligence, Portfolio"
+      content="kennykrichardson, Kenny Richardson, Kenny Richardson Kodipally, AI Engineer, Full-Stack Developer, Software Developer, React, TypeScript, Python, Artificial Intelligence"
     />
     <meta name="author" content="Kenny Richardson" />
     <meta name="creator" content="Kenny Richardson" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://kennykrichardson.com/" />
 
     <!-- Site icons -->
@@ -48,14 +48,14 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Kenny Richardson Kodipally" />
+    <meta property="og:site_name" content="kennykrichardson" />
     <meta
       property="og:title"
-      content="Kenny Richardson Kodipally • AI Engineer & Full-Stack Developer"
+      content="Kenny Richardson (@kennykrichardson) | AI Engineer & Full-Stack Developer"
     />
     <meta
       property="og:description"
-      content="Explore my portfolio featuring AI-powered software, desktop applications, developer tools, and immersive web experiences."
+      content="Explore the portfolio of Kenny Richardson (@kennykrichardson), featuring AI-powered software, desktop applications, developer tools, and immersive web experiences."
     />
     <meta
       property="og:image"
@@ -72,38 +72,70 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Kenny Richardson Kodipally • AI Engineer & Full-Stack Developer"
+      content="Kenny Richardson (@kennykrichardson) | AI Engineer & Full-Stack Developer"
     />
     <meta
       name="twitter:description"
-      content="AI Engineer building intelligent software, developer tools, desktop apps, and immersive web experiences."
+      content="Kenny Richardson (@kennykrichardson) builds intelligent software, developer tools, desktop apps, and immersive web experiences."
     />
     <meta
       name="twitter:image"
       content="https://kennykrichardson.com/og-image.png"
     />
 
-    <!-- Structured data: personal portfolio and creator identity -->
+    <!-- Structured data: connect the exact username, person, and official website -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "name": "Kenny Richardson Kodipally • AI Engineer & Full-Stack Developer",
-        "url": "https://kennykrichardson.com/",
-        "mainEntity": {
-          "@type": "Person",
-          "name": "Kenny Richardson Kodipally",
-          "alternateName": [
-            "kennykrichardson",
-            "Kenny Richardson Kodipally"
-          ],
-          "jobTitle": "AI Engineer & Full-Stack Developer",
-          "url": "https://kennykrichardson.com/",
-          "sameAs": [
-            "https://github.com/kennykrichardson",
-            "https://linkedin.com/in/kennykrichardson"
-          ]
-        }
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://kennykrichardson.com/#profile",
+            "url": "https://kennykrichardson.com/",
+            "name": "Kenny Richardson (@kennykrichardson)",
+            "mainEntity": {
+              "@id": "https://kennykrichardson.com/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://kennykrichardson.com/#person",
+            "name": "Kenny Richardson",
+            "givenName": "Kenny",
+            "familyName": "Richardson",
+            "alternateName": [
+              "kennykrichardson",
+              "Kenny Richardson Kodipally"
+            ],
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "GitHub username",
+              "value": "kennykrichardson"
+            },
+            "disambiguatingDescription": "Software developer and AI engineer known online as kennykrichardson.",
+            "jobTitle": "AI Engineer & Full-Stack Developer",
+            "url": "https://kennykrichardson.com/",
+            "mainEntityOfPage": {
+              "@id": "https://kennykrichardson.com/#profile"
+            },
+            "sameAs": [
+              "https://github.com/kennykrichardson",
+              "https://linkedin.com/in/kennykrichardson",
+              "https://orcid.org/0009-0004-4108-6864"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://kennykrichardson.com/#website",
+            "url": "https://kennykrichardson.com/",
+            "name": "kennykrichardson",
+            "alternateName": "Kenny Richardson",
+            "publisher": {
+              "@id": "https://kennykrichardson.com/#person"
+            },
+            "inLanguage": "en"
+          }
+        ]
       }
     </script>
   </head>
