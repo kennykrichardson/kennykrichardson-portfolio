@@ -122,7 +122,7 @@ kennykrichardson@gmail.com
 
 💼 **LinkedIn**
 
-https://linkedin.com/in/kennyrichardson
+https://linkedin.com/in/kennykrichardson
 
 🐙 **GitHub**
 

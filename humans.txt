@@ -17,7 +17,7 @@ GitHub:
 https://github.com/kennykrichardson
 
 LinkedIn:
-https://linkedin.com/in/kennyrichardson
+https://linkedin.com/in/kennykrichardson
 
 /* SITE */
 
@@ -33,4 +33,4 @@ Tailwind CSS
 
 Designed & Developed by Kenny Richardson
 
-© 2026 All Rights Reserved. 
+© 2026 All Rights Reserved.
