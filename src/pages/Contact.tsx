@@ -52,10 +52,10 @@ ${form.message}`;
       <motion.div className="contact__panel reconstruct" initial={{ opacity: 0, y: 40, filter: "blur(18px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}>
         <div className="contact__copy">
           <p className="eyebrow">Hiring channel</p>
-          <h1><ShuffleText text="Let'&apos;s get" delay={120} /><strong className="hero-lastname"><ShuffleText text=" in touch." delay={120} /></strong></h1>
+          <h1><ShuffleText text="Let's get" delay={120} /><strong className="hero-lastname"><ShuffleText text=" in touch." delay={120} /></strong></h1>
           <p>
           Whether you're hiring for an engineering role, launching an AI product,
-          or looking for a developer to bring an idea to life, I'd love to hear about it.⚡
+          or looking for a developer to bring an idea to life, I'd love to hear about it and apply to be a part of it.⚡
           </p>
 <div className="contact__links">
   <a

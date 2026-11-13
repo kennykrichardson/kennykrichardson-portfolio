@@ -10,14 +10,16 @@ import { projects } from "../data/content";
 
 const sections = [
   {
-    id: "portfolio",
+    category: "portfolio",
     title: "Featured Products",
-    eyebrow: "Built to show range",
   },
   {
-    id: "commercial",
+    category: "commercial",
     title: "Client Work",
-    eyebrow: "Client-facing work",
+  },
+  {
+    category: "extensions",
+    title: "Web Extensions",
   },
 ] as const;
 
@@ -353,9 +355,9 @@ const CASCADE_CSS = `
 
   .projects-toggle {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(9.5rem, 1fr));
+    align-items: stretch;
     width: fit-content;
     margin: 1.25rem auto 0;
     padding: 4px;
@@ -371,7 +373,8 @@ const CASCADE_CSS = `
 
   .projects-toggle__option {
     position: relative;
-    min-width: 9.5rem;
+    width: 100%;
+    min-width: 0;
     padding: 0.7rem 1.15rem;
     border: 0;
     border-radius: 999px;
@@ -394,7 +397,7 @@ const CASCADE_CSS = `
     position: absolute;
     pointer-events: none;
     inset: 4px auto 4px 4px;
-    width: calc(50% - 4px);
+    width: calc((100% - 8px) / 3);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow:
@@ -402,11 +405,25 @@ const CASCADE_CSS = `
       0 5px 20px rgba(0, 0, 0, 0.28);
   }
 
-  .projects-toggle__indicator.is-client {
-    transform: translateX(100%);
-  }
-
   @media (max-width: 640px) {
+    .projects-toggle {
+      width: min(100%, 27rem);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      min-height: 44px;
+    }
+
+    .projects-toggle__option {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      padding: 0.68rem 0.2rem;
+      font-size: clamp(0.52rem, 2.25vw, 0.58rem);
+      letter-spacing: 0.045em;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
     .projects-cascade__slides {
       height: 410px;
     }
@@ -480,7 +497,7 @@ function ProjectCascade({
   section: ProjectSection;
 }) {
   const list = projects.filter(
-    (project) => project.category === section.id,
+    (project) => project.category === section.category,
   );
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -552,7 +569,7 @@ function ProjectCascade({
 
   useEffect(() => {
     setActiveIndex(0);
-  }, [section.id]);
+  }, [section.category]);
 
   if (!list.length) {
     return null;
@@ -668,6 +685,17 @@ function ProjectCascade({
                         </MagneticButton>
                       )}
 
+                      {project.store && (
+                        <MagneticButton
+                          icon="download"
+                          href={project.store}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {project.storeLabel ?? "Download"}
+                        </MagneticButton>
+                      )}
+
                       <MagneticButton
                         icon="github"
                         variant="ghost"
@@ -755,13 +783,14 @@ export function Projects() {
           aria-label="Project category"
         >
           <motion.div
-            className={`projects-toggle__indicator ${
-              activeSection.id === "commercial"
-                ? "is-client"
-                : ""
-            }`}
+            className="projects-toggle__indicator"
             animate={{
-              x: activeSection.id === "commercial" ? "100%" : "0%",
+              x:
+                activeSection.category === "extensions"
+                  ? "200%"
+                  : activeSection.category === "commercial"
+                    ? "100%"
+                    : "0%",
             }}
             transition={{
               type: "spring",
@@ -773,12 +802,12 @@ export function Projects() {
 
           {sections.map((section) => (
             <button
-              key={section.id}
+              key={section.category}
               type="button"
               role="tab"
-              aria-selected={activeSection.id === section.id}
+              aria-selected={activeSection.category === section.category}
               className={`projects-toggle__option ${
-                activeSection.id === section.id
+                activeSection.category === section.category
                   ? "is-active"
                   : ""
               }`}
