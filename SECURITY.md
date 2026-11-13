@@ -17,7 +17,7 @@ If you discover a security vulnerability, please report it privately.
 
 📧 **Email**
 
-kennykrichardson@gmail.com
+kennykrichardson@gmail.com  
 
 Please include:
 
