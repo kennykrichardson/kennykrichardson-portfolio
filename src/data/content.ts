@@ -15,6 +15,9 @@ import foldersaplingImage from "../assets/projects/foldersapling.png"
 import nyxoraImage from "../assets/projects/nyxora.png"
 import kennykrichardsonImage from "../assets/projects/kennykrichardson.png"
 import clenzoraImage from "../assets/projects/clenzora.png"
+import dogearImage from "../assets/projects/dogear.png"
+import processairImage from "../assets/projects/processair.png"
+import proximalImage from "../assets/projects/proximalflap.png"
 import {
   Bot,
   Boxes,
@@ -38,9 +41,11 @@ export type Project = {
   title: string;
   description: string;
   stack: string[];
-  category: "commercial" | "portfolio";
+  category: "commercial" | "portfolio" | "extensions";
   repo: string;
   live?: string;
+  store?: string;
+  storeLabel?: string;
   image?: string;
   icon: LucideIcon;
   accent: string;
@@ -56,6 +61,17 @@ export const projects: Project[] = [
     repo: "https://github.com/kennykrichardson/orzyn-ai-m2.0",
     live: "https://orzyn.onrender.com",
     image: orzynImage,
+    icon: BrainCircuit,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
+    title: "Proximal Flap",
+    description:
+      "A Flappy Bird Style Game with Reinforcement Learning using PPO.",
+    stack: ["Pygame", "PPO", "RL AGENT"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/Proximal-Flap-Autonomous-Flight-PPO",
+    image: proximalImage,
     icon: BrainCircuit,
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
@@ -181,6 +197,16 @@ export const projects: Project[] = [
     accent: "from-red-500/45 via-zinc-100/10 to-black",
   },
   {
+    title: "Processair",
+    description: "Read-only Task Manager for Windows.",
+    stack: ["Rust", "Cargo", "System Monitor"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/processair-system-monitor",
+    image: processairImage,
+    icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
     title: "Sapling",
     description: "App that converts Folder Trees into constructed ZIPs.",
     stack: ["React", "TSX", "TypeScript"],
@@ -189,6 +215,18 @@ export const projects: Project[] = [
     live: "https://sapling.kennykrichardson.com",
     image: foldersaplingImage,
     icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
+    title: "DogEar",
+    description: "A browser extension for proper web note-taking and passage capture.",
+    stack: ["Browser Extension", "Local Storage"],
+    category: "extensions",
+    repo: "https://github.com/kennykrichardson/DogEar-Web-Extension",
+    store: "https://microsoftedge.microsoft.com/addons/detail/mfbjdinbaocanideccbnfajdjjgakifm",
+    storeLabel: "Get it on Edge",
+    image: dogearImage,
+    icon: Globe2,
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
