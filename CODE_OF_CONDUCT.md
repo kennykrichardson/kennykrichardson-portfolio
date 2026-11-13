@@ -26,4 +26,4 @@ Issues regarding bugs, accessibility, or security are welcome.
 
 The project owner reserves the right to remove comments, issues, or discussions that violate these guidelines.
 
-Thank you for helping maintain a positive environment.
+Thank you for helping maintain a positive environment.  
