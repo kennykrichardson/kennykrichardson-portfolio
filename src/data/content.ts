@@ -2,7 +2,7 @@ import type { LucideIcon } from "lucide-react";
 import flashtextImage from "../assets/projects/flashtext.jpeg";
 import fluidDeckImage from "../assets/projects/fluid-deck.png";
 import geotrailImage from "../assets/projects/geotrail.png";
-import nishaImage from "../assets/projects/nisha-fitness.jpg";
+import nishaImage from "../assets/projects/nishasfitness.jpg";
 import orzynImage from "../assets/projects/orzyn-ai.png";
 import quartlyImage from "../assets/projects/quartly.png";
 import mnemosyneImage from "../assets/projects/mnemosyne.png";
