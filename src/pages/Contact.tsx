@@ -43,8 +43,9 @@ Message:
 
 ${form.message}`;
 
-  window.location.href =
-    `https://mail.google.com/mail/?view=cm&fs=1&to=kennykrichardson@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=kennykrichardson@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.open(gmailURL, "_blank", "noopener,noreferrer");
 };
 
   return (
@@ -60,6 +61,8 @@ ${form.message}`;
 <div className="contact__links">
   <a
     href="https://mail.google.com/mail/?view=cm&fs=1&to=kennykrichardson@gmail.com"
+    target="_blank"
+    rel="noopener_noreferrer"
     aria-label="Email"
   >
     <img src={Email} alt="" />
