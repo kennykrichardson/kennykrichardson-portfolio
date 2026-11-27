@@ -67,7 +67,7 @@ export const projects: Project[] = [
   {
     title: "Proximal Flap",
     description:
-      "A Flappy Bird Style Game with Reinforcement Learning using PPO.",
+      "A Flappy Bird Game played by a trained RL Agent(PPO).",
     stack: ["Pygame", "PPO", "RL AGENT"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/Proximal-Flap-Autonomous-Flight-PPO",
