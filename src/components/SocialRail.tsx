@@ -30,7 +30,7 @@ const socials: SocialLink[] = [
   },
   {
     label: "Email",
-    href: "mailto:kennykrichardson@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=kennykrichardson@gmail.com",
     icon: Mail,
   },
 ];
