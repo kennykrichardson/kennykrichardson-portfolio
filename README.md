@@ -96,9 +96,6 @@ An OCR-powered application that extracts text from images.
 
 ## Screenshots
 
-### Intro Boot
-![Intro](screenshots/intro-boot.jpeg)
-
 ### Nexus Page
 ![Nexus](screenshots/nexus-page.png)
 
