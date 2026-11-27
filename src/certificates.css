@@ -882,3 +882,9 @@
     box-shadow: none;
   }
 }
+
+@media (max-width: 820px) {
+  .certificates {
+    padding-bottom: 7.5rem;
+  }
+}
