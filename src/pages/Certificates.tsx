@@ -15,31 +15,13 @@ type Certificate = {
 
 const certificates: Certificate[] = [
   {
-    month: "MAY",
-    year: "2025",
-    type: "Hackathon",
-    title: "HydPyHack",
-    issuer: "HydPyHack",
-    description: "Won 2nd place in the HydPyHack hackathon.",
-    image: "/certificates/placeholder.png",
-  },
-  {
-    month: "MAR",
+    month: "AUG",
     year: "2026",
-    type: "Hackathon",
-    title: "FinTech Hackathon",
-    issuer: "FinTech",
-    description: "Won 1st place in the FinTech hackathon.",
-    image: "/certificates/fintech.png",
-  },
-  {
-    month: "JAN",
-    year: "2026",
-    type: "Hackathon",
-    title: "MENTIS Hackathon",
-    issuer: "MENTIS",
-    description: "Participated and built an AI-Powered ADHD Management System with a 12-day program.",
-    image: "/certificates/mentis.png",
+    type: "Competition",
+    title: "1st Place – Portfolio Website Design Contest",
+    issuer: "Zelvora Technologies",
+    description: "Secured 1st place among 250+ participants for my portfolio website.",
+    image: "/certificates/zelvora.png",
   },
   {
     month: "JUN",
@@ -51,13 +33,31 @@ const certificates: Certificate[] = [
     image: "/certificates/placeholder.png",
   },
   {
-    month: "AUG",
+    month: "JAN",
     year: "2026",
-    type: "Competition",
-    title: "1st Place – Portfolio Website Design Contest",
-    issuer: "Zelvora Technologies",
-    description: "Secured 1st place among 250+ participants for my portfolio website.",
-    image: "/certificates/zelvora.png",
+    type: "Hackathon",
+    title: "MENTIS Hackathon",
+    issuer: "MENTIS",
+    description: "Participated and built an AI-Powered ADHD Management System with a 12-day program.",
+    image: "/certificates/mentis.png",
+  },
+  {
+    month: "June",
+    year: "2025",
+    type: "Hackathon",
+    title: "FinTech Hackathon",
+    issuer: "FinTech",
+    description: "Won 2nd place in the FinTech hackathon.",
+    image: "/certificates/fintech.png",
+  },
+  {
+    month: "MAY",
+    year: "2025",
+    type: "Hackathon",
+    title: "HydPyHack",
+    issuer: "HydPyHack",
+    description: "Won 1st place in the HydPyHack hackathon.",
+    image: "/certificates/placeholder.png",
   },
 ];
 
@@ -217,18 +217,6 @@ export function Certificates() {
       <div className="certificates__bottom">
         <div className="certificates__milestone">
           <p><span /> Documented Milestones</p>
-        </div>
-
-        <div className="certificates__stats">
-          <div>
-            <strong>{certificates.length.toString().padStart(2, "0")}</strong>
-            <span>Certificates</span>
-          </div>
-          <i />
-          <div>
-            <strong>ㅤ∞</strong>
-            <span>ㅤㅤㅤContinuous<br />ㅤㅤㅤLearning</span>
-          </div>
         </div>
       </div>
 
