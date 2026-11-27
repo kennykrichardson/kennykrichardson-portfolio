@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Cpu, Cuboid, Infinity, Layers3 } from "lucide-react";
+import { Cpu, Cuboid, Star, Layers3 } from "lucide-react";
 import { MagneticButton } from "../components/MagneticButton";
 import { ShuffleText } from "../components/ShuffleText";
 import type { PageId } from "../data/content";
@@ -11,7 +11,7 @@ const stats = [
   { value: "30+", label: "Projects shipped", icon: Cuboid },
   { value: "03+", label: "Years learning", icon: Layers3 },
   { value: "35+", label: "Technologies explored", icon: Cpu },
-  { value: "∞", label: "Zeal to build", icon: Infinity },
+  { value: "60", label: "Github Stars", icon: Star },
 ];
 
 export function Home({ onNavigate }: { onNavigate: (page: PageId) => void }) {
