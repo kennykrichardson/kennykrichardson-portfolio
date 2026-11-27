@@ -1831,7 +1831,8 @@ height:45%;
 @media (max-width: 680px) {
   .page-home .page-shell,
   .page-skills .page-shell,
-  .page-contact .page-shell {
+  .page-contact .page-shell,
+  .page-nexus .page-shell {
     padding-top: 4.4rem;
   }
 
