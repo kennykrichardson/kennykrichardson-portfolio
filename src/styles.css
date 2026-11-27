@@ -2986,3 +2986,8 @@ height:45%;
   }
 }
 
+@media (max-width: 680px) {
+  .home.page-shell {
+    padding-top: 4.4rem;
+  }
+}
