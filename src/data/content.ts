@@ -65,17 +65,6 @@ export const projects: Project[] = [
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
-    title: "Proximal Flap",
-    description:
-      "A Flappy Bird Game played by a trained RL Agent(PPO).",
-    stack: ["Pygame", "PPO", "RL AGENT"],
-    category: "portfolio",
-    repo: "https://github.com/kennykrichardson/Proximal-Flap-Autonomous-Flight-PPO",
-    image: proximalImage,
-    icon: BrainCircuit,
-    accent: "from-red-500/50 via-white/10 to-red-950/20",
-  },
-  {
     title: "Lexyra AI",
     description:"AI-Powered Writing Assistant.",
     stack: ["Python", "AI API", "React", "TypeScript"],
@@ -84,6 +73,17 @@ export const projects: Project[] = [
     live: "https://lexyra.onrender.com",
     image: lexyraImage,
     icon: StarCheck,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
+    title: "Proximal Flap",
+    description:
+      "A Flappy Bird Game played by a trained RL Agent(PPO).",
+    stack: ["Pygame", "PPO", "RL AGENT"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/Proximal-Flap-Autonomous-Flight-PPO",
+    image: proximalImage,
+    icon: BrainCircuit,
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
