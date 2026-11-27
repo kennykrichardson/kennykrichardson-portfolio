@@ -29,12 +29,15 @@ export function NavDock({ active, onChange }: NavDockProps) {
           <motion.button
             key={item.id}
             className="dock__item"
+            data-page={item.id}
             data-active={selected}
+            aria-current={selected ? "page" : undefined}
             onClick={() => onChange(item.id)}
-            whileHover={{ y: -7, scale: 1.08 }}
-            whileTap={{ scale: 0.94, filter: "blur(1px)" }}
+            whileHover={{ y: -5, scale: 1.06 }}
+            whileTap={{ scale: 0.96 }}
+            transition={{ type: "spring", stiffness: 420, damping: 28 }}
             type="button"
-            aria-label={item.label}
+            aria-label={item.id === "certificates" ? "Certificates" : item.label}
           >
             <span className="dock__halo" />
             <Icon size={24} strokeWidth={selected ? 2.4 : 1.8} />
