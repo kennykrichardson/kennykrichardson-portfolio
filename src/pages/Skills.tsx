@@ -1,27 +1,10 @@
-import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { skillGroups } from "../data/content";
-
-function CountUp({ value, color, }: { value: number; color: string }) {
-  const motionValue = useMotionValue(0);
-  const spring = useSpring(motionValue, { stiffness: 85, damping: 18 });
-  const rounded = useTransform(spring, (latest) => Math.round(latest));
-  const [display, setDisplay] = useState(value);
-
-  useEffect(() => {
-    motionValue.set(value);
-    return rounded.on("change", (latest) => setDisplay(latest));
-  }, [motionValue, rounded, value]);
-
-  return <span className="skills__percentage" style={{ color }}>
-    {display}
-  </span>;
-}
 
 export function Skills() {
   const [active, setActive] = useState(0);
   const activeGroup = skillGroups[active];
-  const percentage = Math.round(((active + 1) / skillGroups.length) * 100);
   
   const accentColors = [
     "#00ff88", // Languages
@@ -65,7 +48,6 @@ export function Skills() {
             })}
           </div>
           <div className="skills__readout" aria-live="polite">
-            <CountUp value={percentage} color={accentColors[active]} />
             <AnimatePresence mode="wait">
               <motion.h2
                 style={{ color: accentColors[active] }}
