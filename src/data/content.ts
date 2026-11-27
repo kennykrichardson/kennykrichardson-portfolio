@@ -209,7 +209,7 @@ export const projects: Project[] = [
   {
     title: "Proximal Flap",
     description:
-      "A Flappy Bird Game played by a trained RL Agent(PPO).",
+      "A Flappy Bird Game played by a trained RL Agent (PPO).",
     stack: ["Pygame", "PPO", "RL AGENT"],
     category: "portfolio",
     repo: "https://github.com/kennykrichardson/Proximal-Flap-Autonomous-Flight-PPO",
@@ -273,10 +273,10 @@ export type SkillGroup = {
 export const skillGroups: SkillGroup[] = [
   { title: "Languages", icon: Code2, skills: ["Python", "JavaScript", "TypeScript", "C++", "Java", "Rust", "Ruby", "SQL", "HTML5", "CSS3", "Kotlin", "Swift"] },
   { title: "AI / ML", icon: Bot,
-    skills: ["Deep Learning", "NLP", "Fine-Tuning", "LLMs", "Reinforcement Learning/PPO", "Machine Learning", "Huggingface", "Embeddings", "OCR", "Transformers.js", "Inference Pipelines", "Vector Databases", "Semantic Search", "Local AI", "Prompt Engineering"],
+    skills: ["Deep Learning", "NLP", "Fine-Tuning", "LLMs", "Reinforcement Learning/PPO", "Machine Learning", "Huggingface", "Embeddings", "OCR", "Transformers.js", "Inference Pipelines", "Vector Databases", "Semantic Search", "Local AI"],
   },
   { title: "Frontend", icon: LayoutDashboard, skills: ["Electron", "React", "TailwindCSS", "Framer Motion", "GSAP", "Three.js", "React Three Fiber", "Vite", "Recharts", "PWA"] },
-  { title: "Backend", icon: Boxes, skills: ["Python", "Node.js", "Express", "FastAPI", "REST APIs", "Mesa/Solara", "GitHub Blob API"] },
+  { title: "Backend", icon: Boxes, skills: ["Node.js", "Express", "FastAPI", "REST APIs", "Mesa/Solara", "GitHub Blob API"] },
   { title: "Databases", icon: Database, skills: ["SQLite", "LanceDB", "PostgreSQl", "Firebase", "MongoDB"] },
   { title: "Tools", icon: Globe2, skills: ["Render", "Vercel", "Netlify", "Cloudfare", "CI/CD","Git", "GitHub"] },
 ];
