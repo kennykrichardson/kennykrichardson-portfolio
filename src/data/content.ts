@@ -76,17 +76,6 @@ export const projects: Project[] = [
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
-    title: "Proximal Flap",
-    description:
-      "A Flappy Bird Game played by a trained RL Agent(PPO).",
-    stack: ["Pygame", "PPO", "RL AGENT"],
-    category: "portfolio",
-    repo: "https://github.com/kennykrichardson/Proximal-Flap-Autonomous-Flight-PPO",
-    image: proximalImage,
-    icon: BrainCircuit,
-    accent: "from-red-500/50 via-white/10 to-red-950/20",
-  },
-  {
     title: "Habryn Mars",
     description: "Mars Colony Sim made with Python and PyGame.",
     stack: ["Python", "PyGame", "Ruff", "Pytest"],
@@ -218,6 +207,17 @@ export const projects: Project[] = [
     accent: "from-red-500/50 via-white/10 to-red-950/20",
   },
   {
+    title: "Proximal Flap",
+    description:
+      "A Flappy Bird Game played by a trained RL Agent(PPO).",
+    stack: ["Pygame", "PPO", "RL AGENT"],
+    category: "portfolio",
+    repo: "https://github.com/kennykrichardson/Proximal-Flap-Autonomous-Flight-PPO",
+    image: proximalImage,
+    icon: BrainCircuit,
+    accent: "from-red-500/50 via-white/10 to-red-950/20",
+  },
+  {
     title: "DogEar",
     description: "A browser extension for proper web note-taking and passage capture.",
     stack: ["Browser Extension", "Local Storage"],
@@ -272,17 +272,11 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   { title: "Languages", icon: Code2, skills: ["Python", "JavaScript", "TypeScript", "C++", "Java", "Rust", "Ruby", "SQL", "HTML5", "CSS3", "Kotlin", "Swift"] },
-  {
-    title: "Frontend",
-    icon: LayoutDashboard,
-    skills: ["Electron", "React", "TailwindCSS", "Framer Motion", "GSAP", "Three.js", "React Three Fiber", "Vite", "Recharts", "PWA"],
-  },
-  { title: "Backend", icon: Boxes, skills: ["Python", "Node.js", "Express", "FastAPI", "REST APIs", "Mesa/Solara", "GitHub Blob API"] },
-  {
-    title: "AI / ML",
-    icon: Bot,
+  { title: "AI / ML", icon: Bot,
     skills: ["Deep Learning", "NLP", "Fine-Tuning", "LLMs", "Reinforcement Learning/PPO", "Machine Learning", "Huggingface", "Embeddings", "OCR", "Transformers.js", "Inference Pipelines", "Vector Databases", "Semantic Search", "Local AI", "Prompt Engineering"],
   },
+  { title: "Frontend", icon: LayoutDashboard, skills: ["Electron", "React", "TailwindCSS", "Framer Motion", "GSAP", "Three.js", "React Three Fiber", "Vite", "Recharts", "PWA"] },
+  { title: "Backend", icon: Boxes, skills: ["Python", "Node.js", "Express", "FastAPI", "REST APIs", "Mesa/Solara", "GitHub Blob API"] },
   { title: "Databases", icon: Database, skills: ["SQLite", "LanceDB", "PostgreSQl", "Firebase", "MongoDB"] },
   { title: "Tools", icon: Globe2, skills: ["Render", "Vercel", "Netlify", "Cloudfare", "CI/CD","Git", "GitHub"] },
 ];
