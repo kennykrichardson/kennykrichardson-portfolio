@@ -2986,8 +2986,8 @@ height:45%;
   }
 }
 
-@media (max-width: 680px) {
-  .home.page-shell {
-    padding-top: 4.4rem;
+@media screen and (max-width: 680px) {
+  section.home.page-shell {
+    padding-top: 5rem !important;
   }
 }
