@@ -44,7 +44,7 @@ Message:
 ${form.message}`;
 
   window.location.href =
-    `mailto:kennykrichardson@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    `https://mail.google.com/mail/?view=cm&fs=1&to=kennykrichardson@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 };
 
   return (
@@ -54,12 +54,12 @@ ${form.message}`;
           <p className="eyebrow">Hiring channel</p>
           <h1><ShuffleText text="Let's get" delay={120} /><strong className="hero-lastname"><ShuffleText text=" in touch." delay={120} /></strong></h1>
           <p>
-          Whether you're hiring for an engineering role, launching an AI product,
-          or looking for a developer to bring an idea to life, I'd love to hear about it and apply to be a part of it.⚡
+         Hiring for an AI or full-stack role or building something that needs a developer? 
+         Tell me what you're working on and I'll get right back to you.⚡
           </p>
 <div className="contact__links">
   <a
-    href="mailto:kennykrichardson@gmail.com"
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=kennykrichardson@gmail.com"
     aria-label="Email"
   >
     <img src={Email} alt="" />
@@ -136,20 +136,20 @@ ${form.message}`;
   }}
 >
   <MagneticButton
-    icon="send"
-    type="button"
-    onClick={handleWhatsApp}
-  >
-    WhatsApp
-  </MagneticButton>
-
-  <MagneticButton
     icon="mail"
     variant="ghost"
     type="button"
     onClick={handleEmail}
   >
     Email
+  </MagneticButton>
+  
+  <MagneticButton
+    icon="send"
+    type="button"
+    onClick={handleWhatsApp}
+  >
+    WhatsApp
   </MagneticButton>
 </div>
         </form>
