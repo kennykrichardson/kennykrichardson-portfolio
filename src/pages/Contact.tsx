@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { MagneticButton } from "../components/MagneticButton";
 import { ShuffleText } from "../components/ShuffleText";
 import { useState } from "react";
-import Email from "../assets/contacts/Email.png";
-import GitHub from "../assets/contacts/GitHub.png";
-import LinkedIn from "../assets/contacts/LinkedIn.png";
+import Email from "../assets/contacts/Email.svg";
+import GitHub from "../assets/contacts/GitHub.svg";
+import LinkedIn from "../assets/contacts/LinkedIn.svg";
 
 
 
