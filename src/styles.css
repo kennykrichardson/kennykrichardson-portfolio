@@ -2886,6 +2886,26 @@ height:45%;
   }
 }
 
+/* Keep the neural links after the complete hero content on compact and
+   half-desktop layouts, and emphasize the role line and supporting paragraph. */
+@media (max-width: 1199px) {
+  .page-home .home__copy {
+    order: 0 !important;
+  }
+
+  .page-home .neural-links-stage {
+    order: 1 !important;
+  }
+}
+
+.page-home .home h2 {
+  font-weight: 800;
+}
+
+.page-home .home .lede {
+  font-weight: 700;
+}
+
 /* Mobile GitHub action: center the compact icon button against the taller
    neighboring actions instead of leaving it aligned to their top edge. */
 @media (max-width: 680px) {
