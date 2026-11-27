@@ -271,18 +271,18 @@ export type SkillGroup = {
 };
 
 export const skillGroups: SkillGroup[] = [
-  { title: "Languages", icon: Code2, skills: ["Python", "JavaScript", "TypeScript", "C++", "Java", "Rust", "SQL", "HTML5", "CSS3", "Kotlin", "Swift"] },
+  { title: "Languages", icon: Code2, skills: ["Python", "JavaScript", "TypeScript", "C++", "Java", "Rust", "Ruby", "SQL", "HTML5", "CSS3", "Kotlin", "Swift"] },
   {
     title: "Frontend",
     icon: LayoutDashboard,
-    skills: ["React", "TailwindCSS", "Framer Motion", "GSAP", "Three.js", "React Three Fiber", "Vite", "Recharts", "PWA"],
+    skills: ["Electron", "React", "TailwindCSS", "Framer Motion", "GSAP", "Three.js", "React Three Fiber", "Vite", "Recharts", "PWA"],
   },
-  { title: "Backend", icon: Boxes, skills: ["Python", "Node.js", "Express", "FastAPI", "REST APIs", "Mesa/Solara", "API Design", "Middleware", "BLOB API"] },
+  { title: "Backend", icon: Boxes, skills: ["Python", "Node.js", "Express", "FastAPI", "REST APIs", "Mesa/Solara", "GitHub Blob API"] },
   {
     title: "AI / ML",
     icon: Bot,
-    skills: ["Deep Learning", "Fine-Tuning", "Database-Generation", "NLP", "Machine Learning", "LLMs", "Huggingface", "Embeddings", "Jupyter Notebook", "OCR", "Transformers.js", "Prompt Engineering", "Vector Databases", "Semantic Search", "Local AI", "Inference Pipelines"],
+    skills: ["Deep Learning", "NLP", "Fine-Tuning", "LLMs", "Reinforcement Learning/PPO", "Machine Learning", "Huggingface", "Embeddings", "OCR", "Transformers.js", "Inference Pipelines", "Vector Databases", "Semantic Search", "Local AI", "Prompt Engineering"],
   },
-  { title: "Databases", icon: Database, skills: ["Electron", "SQLite", "LanceDB", "PostgreSQl", "Firebase", "Git", "GitHub", "MongoDB"] },
-  { title: "Tools", icon: Globe2, skills: ["VS Code", "Thunder Client", "Render", "Vercel", "Netlify", "Cloudfare", "npm", "pnpm", "CI/CD"] },
+  { title: "Databases", icon: Database, skills: ["SQLite", "LanceDB", "PostgreSQl", "Firebase", "MongoDB"] },
+  { title: "Tools", icon: Globe2, skills: ["Render", "Vercel", "Netlify", "Cloudfare", "CI/CD","Git", "GitHub"] },
 ];
