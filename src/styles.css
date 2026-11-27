@@ -3929,3 +3929,11 @@ height:45%;
     transition: none;
   }
 }
+
+/* Keep every selected navigation item readable in white.
+   Page-specific accents remain on the active background and indicators. */
+.dock .dock__item[data-active="true"],
+.dock .dock__item[data-active="true"] .dock__label,
+.dock .dock__item[data-active="true"] .dock__glitch {
+  color: #fff !important;
+}
