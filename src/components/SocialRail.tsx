@@ -31,9 +31,8 @@ const socials: SocialLink[] = [
   {
     label: "Email",
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=kennykrichardson@gmail.com",
-    target="_blank",
-    rel="noopener noreferrer",
     icon: Mail,
+    external: true,
   },
 ];
 
