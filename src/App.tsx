@@ -5,7 +5,7 @@ import { BootIntro } from "./components/BootIntro";
 import GlowCursor from "./components/GlowCursor";
 import { NavDock } from "./components/NavDock";
 import { PageTransition } from "./components/PageTransition";
-import { ParticleField } from "./components/ParticleField";
+import ParticleNetwork from "./components/ParticleNetwork";
 import { SocialRail } from "./components/SocialRail";
 import type { PageId } from "./data/content";
 
@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className={`app page-${activePage}`}>
-      <ParticleField />
+      <ParticleNetwork />
       {activePage !== "home" && <div className="ambient-moon" aria-hidden="true" />}
       <GlowCursor
         className="glow-cursor--viewport"

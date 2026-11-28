@@ -35,35 +35,56 @@ const clamp = (value: number, min: number, max: number) => Math.max(min, Math.mi
 
 function createParticles(width: number, height: number, density: number): Particle[] {
   const area = width * height;
-  const count = Math.round(clamp((area / 10500) * density, 64, 220));
+  // Keep the 40% connection-density baseline, then scale particle count by viewport.
+  // Mobile (< 768px): 25% fewer particles. Half-desktop (768px–1350px): 15% fewer.
+  // Full desktop remains unchanged.
+  const viewportWidth = window.innerWidth;
+  const viewportFactor =
+    viewportWidth < 768 ? 0.75 :
+    viewportWidth <= 1350 ? 0.85 :
+    1;
+  const baseCount = (area / 10500) * density * 1.4;
+  const count = Math.round(clamp(baseCount * viewportFactor, 90 * viewportFactor, 308 * viewportFactor));
 
-  // A mixture of broad clusters and free points creates irregular, organic meshes
-  // instead of a regular grid or a uniform constellation.
-  const clusters = Array.from({ length: 6 }, () => ({
-    x: random(0.08, 0.92) * width,
-    y: random(0.06, 0.94) * height,
-    spreadX: random(0.11, 0.24) * width,
-    spreadY: random(0.12, 0.28) * height,
-  }));
+  // Start with a loose grid to prevent large empty patches, then add small,
+  // uneven offsets so the distribution feels organic rather than uniform.
+  const aspectRatio = width / Math.max(height, 1);
+  const columns = Math.max(1, Math.round(Math.sqrt(count * aspectRatio)));
+  const rows = Math.ceil(count / columns);
+  const cellWidth = width / columns;
+  const cellHeight = height / rows;
 
-  return Array.from({ length: count }, (_, index) => {
-    let x: number;
-    let y: number;
+  const positions = Array.from({ length: count }, (_, index) => {
+    const column = index % columns;
+    const row = Math.floor(index / columns);
 
-    if (Math.random() < 0.72) {
-      const cluster = clusters[index % clusters.length];
-      // Approximate a soft gaussian with the sum of random values.
-      const gx = (Math.random() + Math.random() + Math.random() + Math.random() - 2);
-      const gy = (Math.random() + Math.random() + Math.random() + Math.random() - 2);
-      x = cluster.x + gx * cluster.spreadX;
-      y = cluster.y + gy * cluster.spreadY;
-    } else {
-      x = Math.random() * width;
-      y = Math.random() * height;
+    // Wider placement range adds natural variation while retaining broad coverage.
+    let x = (column + random(0.08, 0.92)) * cellWidth;
+    let y = (row + random(0.08, 0.92)) * cellHeight;
+
+    // A minority of particles drift farther from their cell centers, creating
+    // subtle local clusters and gaps without letting the whole field clump up.
+    if (Math.random() < 0.18) {
+      x += random(-0.28, 0.28) * cellWidth;
+      y += random(-0.28, 0.28) * cellHeight;
     }
 
+    return {
+      x: clamp(x, 0, width),
+      y: clamp(y, 0, height),
+    };
+  });
+
+  // Shuffle the positions so the grid does not read as rows or columns.
+  for (let i = positions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [positions[i], positions[j]] = [positions[j], positions[i]];
+  }
+
+  return positions.map(({ x, y }) => {
     const angle = random(0, Math.PI * 2);
     const velocity = random(5.5, 13.5);
+
     return {
       x: clamp(x, 0, width),
       y: clamp(y, 0, height),
@@ -98,9 +119,10 @@ function buildEdges(particles: Particle[], maxDistance: number): Edge[] {
 
     nearby.sort((left, right) => left.distance - right.distance);
 
-    // Three nearest links form the base mesh. A fourth, occasional link gives
-    // the larger, asymmetric triangles seen in the visual reference.
-    const linkCount = Math.random() < 0.24 ? 4 : 3;
+    // Increase connection count by approximately 40%: each particle selects
+    // four links, with a fifth link on 53.6% of particles (average 4.536 vs 3.24).
+    // This thickens the network geometry without adding more particles.
+    const linkCount = Math.random() < 0.536 ? 5 : 4;
     for (const neighbour of nearby.slice(0, linkCount)) {
       const low = Math.min(i, neighbour.index);
       const high = Math.max(i, neighbour.index);
@@ -124,10 +146,11 @@ const componentStyles = `
   display: block;
   overflow: hidden;
   pointer-events: none;
-  background: #000;
   contain: strict;
 }
 .particle-network canvas {
+  position: relative;
+  z-index: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -160,7 +183,7 @@ export default function ParticleNetwork({
     const host = canvas?.parentElement;
     if (!canvas || !host) return;
 
-    const context = canvas.getContext("2d", { alpha: false });
+    const context = canvas.getContext("2d", { alpha: true });
     if (!context) return;
 
     let width = 1;
@@ -174,6 +197,10 @@ export default function ParticleNetwork({
     let isAnimating = true;
     let lastEdgeBuild = 0;
     let cachedEdges: Edge[] = [];
+    let previousViewportFactor =
+      window.innerWidth < 768 ? 0.75 :
+      window.innerWidth <= 1350 ? 0.85 :
+      1;
 
     const resize = () => {
       const bounds = host.getBoundingClientRect();
@@ -190,7 +217,17 @@ export default function ParticleNetwork({
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
 
-      if (particles.length && oldWidth > 1 && oldHeight > 1) {
+      const nextViewportFactor =
+        window.innerWidth < 768 ? 0.75 :
+        window.innerWidth <= 1350 ? 0.85 :
+        1;
+
+      if (
+        particles.length &&
+        oldWidth > 1 &&
+        oldHeight > 1 &&
+        nextViewportFactor === previousViewportFactor
+      ) {
         const sx = width / oldWidth;
         const sy = height / oldHeight;
         particles.forEach(particle => {
@@ -200,6 +237,8 @@ export default function ParticleNetwork({
       } else {
         particles = createParticles(width, height, density);
       }
+
+      previousViewportFactor = nextViewportFactor;
 
       cachedEdges = [];
       lastEdgeBuild = 0;
@@ -245,8 +284,7 @@ export default function ParticleNetwork({
       }
 
       context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-      context.fillStyle = "#000";
-      context.fillRect(0, 0, width, height);
+      context.clearRect(0, 0, width, height);
 
       // Very faint atmospheric points give depth without introducing a gradient wash.
       for (let i = 0; i < particles.length; i++) {
@@ -345,6 +383,8 @@ export default function ParticleNetwork({
         aria-hidden="true"
       >
         <canvas ref={canvasRef} />
+        <div className="particle-network__ambient" />
+        <div className="particle-network__grid" />
       </div>
     </>
   );
